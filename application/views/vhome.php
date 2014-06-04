@@ -2,18 +2,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Itaituba Shopping</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="description" content="">
 	    <meta name="author" content="endogenese">
 
 	    <!-- Le styles -->
 	    <link href="css/bootstrap.css" rel="stylesheet">
-	    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
 		<link href="css/template.css" rel="stylesheet">
 
-	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	    <!--[if lt IE 9]>
-	      <script src="js/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 
 
@@ -26,48 +29,45 @@
 
 			<div class="row" id="menu">
 
-				<div class="span12">
+				<div class="col-md-12">
+					<nav class="navbar navbar-default" role="navigation">
 
-					<div class="navbar">
-				        <div class="navbar-inner">
+						<div class="container-fluid">
 
-				        	<div class="container">
+							<div class="navbar-header">		        
 
 				        		<!-- Menu responsivo-->
-				        		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</a>
+				        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						            <span class="sr-only">Toggle navigation</span>
+						            <span class="icon-bar"></span>
+						        	<span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						        </button>
 								
-								<a class="brand" href="#">Itaituba Shopping</a>
+								<a class="navbar-brand" href="#">Itaituba Shopping</a>
+							</div><!--/.navbar-header -->
 
-								<div class="nav-collapse collapse">
-							        <ul class="nav">
-								        <li class="active"><a href="#"><strong>HOME</strong></a></li>
-								        <li class="divider-vertical"></li>
-								        <li><a href="#"><strong>LOJAS</strong></a></li>
-								        <li class="divider-vertical"></li>
-								        <li><a href="#"><strong>CINEMA</strong></a></li>
-								        <li class="divider-vertical"></li>
-								        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-								        <li class="divider-vertical"></li>
-								        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
-							        </ul>
-							    </div>
-							</div>
-				        </div><!-- .navbar-inner-->
-			        </div><!-- .navbar -->
-
+							<div class="collapse navbar-collapse">
+						        <ul class="nav navbar-nav">
+							        <li class="active"><a href="#"><strong>HOME</strong></a></li>
+							        <li><a href="#"><strong>LOJAS</strong></a></li>
+							        <li><a href="#"><strong>CINEMA</strong></a></li>
+							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+							        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+						        </ul>
+						    </div><!--/.nav-collapse -->			
+						
+						</div><!---/.container-fluid-->
+					</nav>
 				</div>
 
-			</div><!-- fim MENU-->
+			</div><!--/#menu-->
 
 			<div class="row" id="banner_home">
 
-				<div class="span12">
+				<div class="col-md-12">
 
-					<img class="img-rounded" src="http://placehold.it/1350x300">
+					<img class="img-rounded" src="http://placehold.it/1138x300">
 
 				</div>
 
@@ -75,7 +75,7 @@
 
 			<div class="row" id="corpo_home">
 
-				<div class="span7">
+				<div class="col-md-7">
 
 					<div id="novidades_home">
 
@@ -120,7 +120,7 @@
 					</div><!-- #NOVIDADES HOME -->
 				</div>
 
-				<div class="span5">
+				<div class="col-md-5">
 					
 					<div id="fotos_home">
 					
@@ -132,7 +132,7 @@
 
 			</div><!-- # CORPO_HOME-->
 			
-			<div class="span12">
+			<div class="col-md-12">
 				<div class="row" id="rodape">
 
 				
@@ -156,7 +156,7 @@
 
 		<!-- Arquivos Javascripts
 	    ================================================== -->
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
 
 	</body>

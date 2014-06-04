@@ -2,18 +2,18 @@
  * AJUSTES DO MENU
  */
 
-.navbar {
+.navbar-header {
     margin-bottom: 1px;
 }
 
-.navbar-inner{
+.navbar{
 	color: #fff;
 	background-color: #0066ff;
     background-image: linear-gradient(to bottom, #63A0D6, #3B6FA8);
     border: 1px solid #3B6FA8;
 }
 
-.navbar .brand, .navbar .nav > li > a {
+.navbar-header .navbar-brand, .collapse .nav > li > a {
     color: #fff;
     text-shadow: 0 1px 0 #000;
 }
@@ -23,12 +23,16 @@
     border-right: 1px solid #63A0D6;
 }
 
-.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+.collapse .nav > .active > a, .navbar-collapse .nav > .active > a:hover, .collapse .nav > .active > a:focus {
     background-image: linear-gradient(to bottom, #3885CB, #325E8D);
 
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
     color: #FFF;
     text-decoration: none;
+}
+
+.navbar-collapse .nav > a:hover{
+	background-image: linear-gradient(to bottom, #3885CB, #325E8D);
 }
 
  /*
