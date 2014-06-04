@@ -1,0 +1,87 @@
+ /*
+ * AJUSTES DO MENU
+ */
+
+.navbar {
+    margin-bottom: 1px;
+}
+
+.navbar-inner{
+	color: #fff;
+	background-color: #0066ff;
+    background-image: linear-gradient(to bottom, #63A0D6, #3B6FA8);
+    border: 1px solid #3B6FA8;
+}
+
+.navbar .brand, .navbar .nav > li > a {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+.navbar .divider-vertical {
+    border-left: 1px solid #416396;
+    border-right: 1px solid #63A0D6;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-image: linear-gradient(to bottom, #3885CB, #325E8D);
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
+    color: #FFF;
+    text-decoration: none;
+}
+
+ /*
+ * CORPO DA HOME
+ */
+#novidades_home{
+	background-color: #f2f2f2;
+	min-height: 520px;
+	border-radius: 6px;
+}
+
+#fotos_home{
+	background-color: #f2f2f2;
+	height: 400px;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+.media-list .media{
+	background-color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	display: block;
+}
+
+#mais_noticias a{
+	text-decoration: none;
+	background-color: #fff;
+	width: 100%;
+	height: 20px;
+}
+
+#rodape{
+	margin-top: 20px;
+}
+
+
+#rodape > p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#rodape #redes_sociais{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+#rodape #redes_sociais img{
+	height: 30px;
+	width: 30px;
+}
