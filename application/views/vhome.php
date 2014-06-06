@@ -117,7 +117,7 @@
 
 				</div>
 
-			</div><!-- fim BANNER_HOME-->
+			</div><!--/#BANNER_HOME-->
 
 			<div class="row" id="corpo_home">
 
@@ -181,7 +181,7 @@
 					</div><!-- #NOVIDADES HOME -->
 				</div>
 
-				<div class="col-md-5 hidden-xs">
+				<div id="esquerda_corpo_home" class="col-md-5 hidden-xs">
 					
 					<div class="row">
 						<div id="fotos_home">
@@ -267,17 +267,15 @@
 
 					<div class="row" id="mapa_ita">
 						<h2>Nossa Localização</h2>
-							<iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m&amp;output=embed"></iframe><br /><small style="text-align:center;margin-left:40%"><a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m">Exibir mapa ampliado</a></small>
+						<iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m&amp;output=embed"></iframe><br /><small style="text-align:center;margin-left:40%"><a style="color:#000" href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m">Exibir mapa ampliado</a></small>
 					</div><!--./mapa_ita-->
 
 				</div>
 
-			</div><!-- # CORPO_HOME-->
+			</div><!--/#CORPO_HOME-->
 			
 			<div class="col-md-12">
 				<div class="row" id="rodape">
-
-				
 
 					<p class="text-center">Siga-nos nas redes sociais</p>
 					
@@ -289,12 +287,12 @@
 					<p class="text-center">2014 - Itaituba Shopping - Todos os direitos reservados</p>
 					<p class="text-center"><small>Desenvolvido por <a href="http://wwww.endogense.com.br">Endogênese</a></small></p>
 
-				</div><!-- fim rodape-->
+				</div><!--/.rodape-->
 
 			</div>
 
 
-		</div> <!-- fim CONTAINER-->
+		</div> <!--/.CONTAINER-->
 
 		<!-- Arquivos Javascripts
 	    ================================================== -->
