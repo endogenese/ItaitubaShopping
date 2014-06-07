@@ -1,205 +1,317 @@
-<?php
+<html lang="pt">
+	<head>
+		<meta charset="utf-8" />
+		<title>Itaituba Shopping</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="endogenese">
 
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
- *
- * This can be set to anything, but default usage is:
- *
- *     development
- *     testing
- *     production
- *
- * NOTE: If you change these, also change the error_reporting() code below
- *
- */
-	define('ENVIRONMENT', 'development');
-/*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
- *
- * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
- */
+	    <!-- Le styles -->
+	    <link href="css/bootstrap.css" rel="stylesheet">
 
-if (defined('ENVIRONMENT'))
-{
-	switch (ENVIRONMENT)
-	{
-		case 'development':
-			error_reporting(E_ALL);
-		break;
-	
-		case 'testing':
-		case 'production':
-			error_reporting(0);
-		break;
+		<link href="css/template.css" rel="stylesheet">
 
-		default:
-			exit('The application environment is not set correctly.');
-	}
-}
-
-/*
- *---------------------------------------------------------------
- * SYSTEM FOLDER NAME
- *---------------------------------------------------------------
- *
- * This variable must contain the name of your "system" folder.
- * Include the path if the folder is not in the same  directory
- * as this file.
- *
- */
-	$system_path = 'system';
-
-/*
- *---------------------------------------------------------------
- * APPLICATION FOLDER NAME
- *---------------------------------------------------------------
- *
- * If you want this front controller to use a different "application"
- * folder then the default one you can set its name here. The folder
- * can also be renamed or relocated anywhere on your server.  If
- * you do, use a full server path. For more info please see the user guide:
- * http://codeigniter.com/user_guide/general/managing_apps.html
- *
- * NO TRAILING SLASH!
- *
- */
-	$application_folder = 'application';
-
-/*
- * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
- * --------------------------------------------------------------------
- *
- * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here.  For most applications, you
- * WILL NOT set your routing here, but it's an option for those
- * special instances where you might want to override the standard
- * routing in a specific front controller that shares a common CI installation.
- *
- * IMPORTANT:  If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller.  Leave the function name blank if you need
- * to call functions dynamically via the URI.
- *
- * Un-comment the $routing array below to use this feature
- *
- */
-	// The directory name, relative to the "controllers" folder.  Leave blank
-	// if your controller is not in a sub-folder within the "controllers" folder
-	// $routing['directory'] = '';
-
-	// The controller class file name.  Example:  Mycontroller
-	// $routing['controller'] = '';
-
-	// The controller function you wish to be called.
-	// $routing['function']	= '';
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
 
 
-/*
- * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
- * -------------------------------------------------------------------
- *
- * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
- * multiple front controller files, with each file containing different
- * config values.
- *
- * Un-comment the $assign_to_config array below to use this feature
- *
- */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+	</head>
 
 
+	<body>
 
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
+		<div class="container">
 
-/*
- * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
- * ---------------------------------------------------------------
- */
+			<div class="row" id="menu">
 
-	// Set the current directory correctly for CLI requests
-	if (defined('STDIN'))
-	{
-		chdir(dirname(__FILE__));
-	}
+				<div class="col-md-12">
+					<nav class="navbar navbar-default" role="navigation">
 
-	if (realpath($system_path) !== FALSE)
-	{
-		$system_path = realpath($system_path).'/';
-	}
+						<div class="container-fluid">
 
-	// ensure there's a trailing slash
-	$system_path = rtrim($system_path, '/').'/';
+							<div class="navbar-header">		        
 
-	// Is the system path correct?
-	if ( ! is_dir($system_path))
-	{
-		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-	}
+				        		<!-- Menu responsivo-->
+				        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						            <span class="sr-only">Toggle navigation</span>
+						            <span class="icon-bar"></span>
+						        	<span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						        </button>
+								
+								<!-- Esse brand será exibido na versão para phone -->
+								<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">Itaituba Shopping</a>
+							</div><!--/.navbar-header -->
 
-/*
- * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
- * -------------------------------------------------------------------
- */
-	// The name of THIS file
-	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+							<div class="collapse navbar-collapse">
+						        <ul class="nav navbar-nav ">
+							        <li class="active"><a href="#"><strong>HOME</strong></a></li>
+							        <li><a href="lojas.php"><strong>LOJAS</strong></a></li>
+							        <li><a href="#"><strong>CINEMA</strong></a></li>
+							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+							        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+						        </ul>
+						    </div><!--/.nav-collapse -->			
+						
+						</div><!---/.container-fluid-->
+					</nav>
+				</div>
 
-	// The PHP file extension
-	// this global constant is deprecated.
-	define('EXT', '.php');
+			</div><!--/#menu-->
 
-	// Path to the system folder
-	define('BASEPATH', str_replace("\\", "/", $system_path));
+			<div class="row" id="banner_home">
 
-	// Path to the front controller (this file)
-	define('FCPATH', str_replace(SELF, '', __FILE__));
+				<div class="col-md-12">
 
-	// Name of the "system folder"
-	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+						<ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						 
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+						    <div class="item active">
+						      <img src="http://placehold.it/1138x300" alt="...">
+						      <div class="carousel-caption">
+						        <h3>Slide 1</h3>
+    							<p>Descricação 1</p>
+						      </div>
+						    </div>
+
+						    <div class="item">
+						      <img src="http://placehold.it/1138x300" alt="...">
+						      <div class="carousel-caption">
+						        <h3>Slide 2</h3>
+    							<p>Descricação 2</p>
+						      </div>
+						    </div>
+
+						    <div class="item">
+						      <img src="http://placehold.it/1138x300" alt="...">
+						      <div class="carousel-caption">
+						        <h3>Slide 2</h3>
+    							<p>Descricação 2</p>
+						      </div>
+						    </div>
+						    
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left"></span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div><!--/.carousel-->
 
 
-	// The path to the "application" folder
-	if (is_dir($application_folder))
-	{
-		define('APPPATH', $application_folder.'/');
-	}
-	else
-	{
-		if ( ! is_dir(BASEPATH.$application_folder.'/'))
-		{
-			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
-		}
+				</div>
 
-		define('APPPATH', BASEPATH.$application_folder.'/');
-	}
+			</div><!--/#BANNER_HOME-->
 
-/*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
- *
- * And away we go...
- *
- */
-require_once BASEPATH.'core/CodeIgniter.php';
+			<div class="row" id="corpo_home">
 
-/* End of file index.php */
-/* Location: ./index.php */
+				<div class="col-md-7">
+
+					<div id="novidades_home">
+
+						<h2 class="text-center">Itaituba Shopping Notícias</h2>
+
+						<ul class="media-list">
+							<li class="media">
+						        <a class="pull-left" href="#">
+						        <img class="media-object img-rounded" src="http://placehold.it/150x160">
+						        </a>
+
+						        <div class="media-body">
+							        <h3 class="media-heading">Notícia 1</h3>
+							        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							    	Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+							    	</p>	
+							    	<a class="btn btn-danger" href="#">Saiba Mais »</a>
+						        </div>
+						    </li>
+
+							<li class="media">
+						        <a class="pull-left" href="#">
+						        <img class="media-object img-rounded" src="http://placehold.it/150x160">
+						        </a>
+
+						        <div class="media-body">
+							        <h3 class="media-heading">Notícia 2</h3>
+							        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							    	Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+							    	</p>	
+							    	<a class="btn btn-danger" href="#">Saiba Mais »</a>
+						        </div>
+						    </li>					    
+
+						    <li class="media">
+						        <a class="pull-left" href="#">
+						        <img class="media-object img-rounded" src="http://placehold.it/150x160">
+						        </a>
+
+						        <div class="media-body">
+							        <h3 class="media-heading">Notícia 3</h3>
+							        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+							    	Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+							    	</p>	
+							    	<a class="btn btn-danger" href="#">Saiba Mais »</a>
+						        </div>
+						    </li>
+						</ul><!-- ul media-list-->
+
+						<div id="mais_noticias" class="">
+							<a href="#" class="text-center" ><h3>Mais Notícias</h3></a>
+						</div>
+
+					</div><!-- #NOVIDADES HOME -->
+				</div>
+
+				<div id="esquerda_corpo_home" class="col-md-5 hidden-xs">
+					
+					<div class="row">
+						<div id="fotos_home">
+						
+							<h2 class="text-center">Confira as fotos do shopping</h2>
+							
+							<div id="galleria">
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/800px-Biandintz_eta_zaldiak_-_modified2.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/100px-Biandintz_eta_zaldiak_-_modified2.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/1280px-Biandintz_eta_zaldiak_-_modified2.jpg"
+					                    data-title="Biandintz eta zaldiak"
+					                    data-description="Horses on Bianditz mountain, in Navarre, Spain."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Athabasca_Rail_at_Brule_Lake.jpg/800px-Athabasca_Rail_at_Brule_Lake.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Athabasca_Rail_at_Brule_Lake.jpg/100px-Athabasca_Rail_at_Brule_Lake.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Athabasca_Rail_at_Brule_Lake.jpg/1280px-Athabasca_Rail_at_Brule_Lake.jpg"
+					                    data-title="Athabasca Rail"
+					                    data-description="The Athabasca River railroad track at the mouth of Brulé Lake in Alberta, Canada."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Back-scattering_crepuscular_rays_panorama_1.jpg/1280px-Back-scattering_crepuscular_rays_panorama_1.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Back-scattering_crepuscular_rays_panorama_1.jpg/100px-Back-scattering_crepuscular_rays_panorama_1.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Back-scattering_crepuscular_rays_panorama_1.jpg/1400px-Back-scattering_crepuscular_rays_panorama_1.jpg"
+					                    data-title="Back-scattering crepuscular rays"
+					                    data-description="Picture of the day on Wikimedia Commons 26 September 2010."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Interior_convento_3.jpg/800px-Interior_convento_3.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Interior_convento_3.jpg/120px-Interior_convento_3.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Interior_convento_3.jpg/1400px-Interior_convento_3.jpg"
+					                    data-title="Interior convento"
+					                    data-description="Interior view of Yuriria Convent, founded in 1550."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg/800px-Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg/100px-Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg/1280px-Oxbow_Bend_outlook_in_the_Grand_Teton_National_Park.jpg"
+					                    data-title="Oxbow Bend outlook"
+					                    data-description="View over the Snake River to the Mount Moran with the Skillet Glacier."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Hazy_blue_hour_in_Grand_Canyon.JPG/800px-Hazy_blue_hour_in_Grand_Canyon.JPG">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Hazy_blue_hour_in_Grand_Canyon.JPG/100px-Hazy_blue_hour_in_Grand_Canyon.JPG",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Hazy_blue_hour_in_Grand_Canyon.JPG/1280px-Hazy_blue_hour_in_Grand_Canyon.JPG"
+					                    data-title="Hazy blue hour"
+					                    data-description="Hazy blue hour in Grand Canyon. View from the South Rim."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/2909_vallon_moy_res.jpg/800px-2909_vallon_moy_res.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/2909_vallon_moy_res.jpg/100px-2909_vallon_moy_res.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/2909_vallon_moy_res.jpg/1280px-2909_vallon_moy_res.jpg"
+					                    data-title="Haute Severaisse valley"
+					                    data-description="View of Haute Severaisse valley and surrounding summits from the slopes of Les Vernets."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bohinjsko_jezero_2.jpg/800px-Bohinjsko_jezero_2.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bohinjsko_jezero_2.jpg/100px-Bohinjsko_jezero_2.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bohinjsko_jezero_2.jpg/1280px-Bohinjsko_jezero_2.jpg"
+					                    data-title="Bohinj lake"
+					                    data-description="Bohinj lake (Triglav National Park, Slovenia) in the morning."
+					                >
+					            </a>
+					            <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/800px-Bowling_Balls_Beach_2_edit.jpg">
+					                <img 
+					                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/100px-Bowling_Balls_Beach_2_edit.jpg",
+					                    data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/1280px-Bowling_Balls_Beach_2_edit.jpg"
+					                    data-title="Bowling Balls"
+					                    data-description="Mendocino county, California, USA."
+					                >
+					            </a>
+					        </div>
+						</div><!--/#FOTOS HOME -->
+					</div>
+
+					<div class="row" id="mapa_ita">
+						<h2>Nossa Localização</h2>
+						<iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m&amp;output=embed"></iframe><br /><small style="text-align:center;margin-left:40%"><a style="color:#000" href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m">Exibir mapa ampliado</a></small>
+					</div><!--./mapa_ita-->
+
+				</div>
+
+			</div><!--/#CORPO_HOME-->
+			
+			<div class="col-md-12">
+				<div class="row" id="rodape">
+
+					<p class="text-center">Siga-nos nas redes sociais</p>
+					
+					<div id="redes_sociais">
+						<img src="img/facebook.png" alt="Facebook"/>
+						<img src="img/twitter.png" alt="Twitter"/>
+					</div>
+					
+					<p class="text-center">2014 - Itaituba Shopping - Todos os direitos reservados</p>
+					<p class="text-center"><small>Desenvolvido por <a href="http://wwww.endogense.com.br">Endogênese</a></small></p>
+
+				</div><!--/.rodape-->
+
+			</div>
+
+
+		</div> <!--/.CONTAINER-->
+
+		<!-- Arquivos Javascripts
+	    ================================================== -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/galleria/galleria-1.3.5.min.js"></script>
+	    <script type="text/javascript">
+		    Galleria.ready(function(options) {
+
+	            this.play(5000);
+	        });
+
+		    // Load the classic theme
+		    Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
+
+		    // Initialize Galleria
+		    Galleria.run('#galleria');
+	    </script>
+
+	</body>
+
+</html>
