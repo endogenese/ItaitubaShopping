@@ -28,11 +28,8 @@
     text-shadow: 0 1px 0 #000;
 }
 
-/*defini o divisor vertical entre os itens do menu*/
-.collapse .nav > li > a {
-    border-left: 1px solid #92BCE2;
-    border-right: 1px solid #385581;
-    text-align: center
+.collapse .nav > li > a{
+		text-align: center;
 }
 
 /*define um fundo diferente para o item do menu selecionado*/
@@ -43,21 +40,56 @@
     text-decoration: none;
 }
 
+.collapse .nav a:hover, .collapse .nav a:focus{
+	color: #fc0;
+	background-image: linear-gradient(to bottom, #78ACDC, #3B6FA8 );
+    box-shadow: 0 3px 8px rgba(252, 252, 252, 0.4) inset;	
+}
 
 /*expande a largura da lista para a largura no menu*/
-.nav {
+#menu_justificado, #menu_justificado .nav {
 	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
-/*justifica o alinhamento dos itens do menu*/
-.nav li{
-	width: 20%;     
+#menu_justificado .nav {
+	display: table;
 }
 
-/*justifica o alinhamento dos itens do menu*/
-.navbar-collapse, .container-fluid{
-	padding-right: 0px;
-	padding-left: 0px;
+#menu_justificado .nav li{
+	display: table-cell;
+    width: 20%;
+    float: none;
+}
+
+#menu_justificado .nav li a{
+	border-left: 1px solid #92BCE2;
+    border-right: 1px solid #385581;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu_justificado .nav > .active > a, #menu_justificado .nav > .active > a:hover, #menu_justificado .nav > .active > a:focus {
+    background-image: linear-gradient(to bottom, #3885CB, #325E8D);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
+}
+
+#menu_justificado .nav  a:hover{
+	color: #fc0;
+	background-image: linear-gradient(to bottom, #78ACDC, #3B6FA8 );
+    box-shadow: 0 3px 8px rgba(252, 252, 252, 0.4) inset;	
+}
+
+#menu_justificado .nav li:first-child a {
+	border-left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+#menu_justificado .nav li:last-child a {
+	border-right: 0;
+	border-radius: 0 3px 3px 0;
 }
 
 /*altera as cores no menu mobile*/
@@ -184,6 +216,53 @@
 	height: 240px;
 	margin-left: 7%;
 }
+
+
+/*##################
+ * CORPO_LOJAS
+##################*/
+
+      #lista_lojas div {
+        color:#FF0000; 
+        padding:5px; 
+        width:200px; 
+        height:100px; 
+        overflow:auto; 
+      }
+
+      #lista_lojas ul{
+        /*list-style: none;
+        padding:0;
+        width: 100%;*/
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #lista_lojas a{
+        /*text-decoration: none;
+        background-color: #cccccc;
+        width: 100px;
+        display: block;*/
+        display: block;
+        padding: 5px 5px 5px 0.5em;
+        font-weight:bold;
+        border-left: 10px solid #f6f6f6;
+        /*border-right: 10px solid #f1f1f1;*/
+        background-color: #fff;
+        color: #808000;
+        text-decoration: none;
+      }
+
+      #lista_lojas a:hover{
+        background-color: #f6f6f6
+      }
+
+      #lista_lojas li{
+        border-bottom: 1px solid #fff;
+        margin: 0;
+      }
+
 
  /*##################
  * RODAPE
