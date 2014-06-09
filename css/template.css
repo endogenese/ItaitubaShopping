@@ -1,0 +1,219 @@
+ 
+ body{
+ 	background-image: url("../img/grey.png");
+ }
+
+ /*######################
+ * AJUSTES DO MENU
+ #######################*/
+
+/*recua para baixo o menu*/
+#menu{
+	margin-top: 5px;
+}
+
+/*Define o gradiente do menu*/
+.navbar{
+	color: #fff;
+	background-color: #0066ff;
+    background-image: linear-gradient(to bottom, #63A0D6, #3B6FA8);
+    border: 1px solid #3B6FA8;
+    margin-bottom: 1px;
+
+}
+
+/*define o sombreamento nos links do menu*/
+.navbar-header .navbar-brand, .collapse .nav > li > a {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+/*defini o divisor vertical entre os itens do menu*/
+.collapse .nav > li > a {
+    border-left: 1px solid #92BCE2;
+    border-right: 1px solid #385581;
+    text-align: center
+}
+
+/*define um fundo diferente para o item do menu selecionado*/
+.collapse .nav > .active > a, .navbar-collapse .nav > .active > a:hover, .collapse .nav > .active > a:focus {
+    background-image: linear-gradient(to bottom, #3885CB, #325E8D);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/*expande a largura da lista para a largura no menu*/
+.nav {
+	width: 100%;
+}
+
+/*justifica o alinhamento dos itens do menu*/
+.nav li{
+	width: 20%;     
+}
+
+/*justifica o alinhamento dos itens do menu*/
+.navbar-collapse, .container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+/*altera as cores no menu mobile*/
+.navbar-header .navbar-toggle {
+	background-color: #fff;
+	border-color: #000;
+}
+
+/*altera as cores no menu mobile*/
+.navbar-header .navbar-toggle .icon-bar {
+    background-color: #3B6FA8;
+}
+
+
+/*.navbar-default .navbar-collapse{
+	border:0px solid;
+    border-color: rgba(0,0,0,1);
+}*/
+
+ /*################
+ * CORPO DA HOME
+ *#################*/
+
+/*Configurações básicas do painel de Notícias(novidades)*/
+#novidades_home{
+	background-color: rgba(135, 189, 240, 0.6);
+	min-height: 480px;
+	border-radius: 6px;
+	padding-bottom: 1%;
+	text-align: justify;
+}
+
+/*Cor da head do painel de noticias*/
+#novidades_home h2{
+	color: #990000;
+}
+
+/*Configuração das noticias(novidades)*/
+.media-list .media{
+	background-color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	display: block;
+}
+
+/*Configuração do botão mais novidades*/
+#mais_noticias{
+	background-color: #fff;
+	width: 97%;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 6px;
+
+	/*padding-top: 2px;
+	padding-bottom: 5px;	*/
+}
+
+/*Configuração do botão mais novidades*/
+#mais_noticias a{
+	text-decoration: none;
+	color: #000;
+}
+
+/*Configuração do botão mais novidades*/
+#mais_noticias:hover{
+	background-color: #f9f9f9;
+
+}
+
+/*Alinhamento da coluna direita da página*/
+#esquerda_corpo_home > .row{
+	margin-right: 0px;
+}
+
+/*Configurações básicas do painel de Fotos*/
+#fotos_home{
+	background-color: rgba(135, 189, 240, 0.6);
+	height: 350px;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+/*Cor da head do painel de fotos*/
+#fotos_home h2{
+	color: #990000;
+}
+
+/*Configuração do plugin de fotos*/
+ #galleria{
+ 	height:300px;
+ 	width:420px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+
+/*Define a cor do fundo do painel de fotos*/
+.galleria-container{
+	background-color: #000;
+	border: 2px solid #fff;
+}
+
+/*Configuração do painel do mapa*/
+#mapa_ita{
+	background-color: rgba(135, 189, 240, 0.6);
+	height: 310px;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+/*Define cor e alinhamento do head do painel do mapa*/
+#mapa_ita h2{
+	margin: 2% 0 2% 0;
+	text-align: center;
+	color:#990000;
+}
+
+/*Configuração do map*/
+#mapa_ita iframe{
+	margin:auto;
+	width: 420px;
+	height: 240px;
+	margin-left: 7%;
+}
+
+ /*##################
+ * RODAPE
+   ##################*/
+
+/*Configuração do rodape*/
+#rodape{
+	margin-top: 20px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	border-radius: 6px;
+}
+
+/*Configuração do texto do rodape*/
+#rodape > p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/*Configuração dos espaço destinado a redes sociais*/
+#rodape #redes_sociais{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+/*Configuração das imagens das redes sociais*/
+#rodape #redes_sociais img{
+	height: 30px;
+	width: 30px;
+}
