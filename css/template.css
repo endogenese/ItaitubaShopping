@@ -222,47 +222,74 @@
  * CORPO_LOJAS
 ##################*/
 
-      #lista_lojas div {
-        color:#FF0000; 
-        padding:5px; 
-        width:200px; 
-        height:100px; 
-        overflow:auto; 
-      }
+#lista_lojas { 
+    border-collapse:collapse; 
+    border:2px solid #FF0000; 
+    background-color:#FFFFFF;
+	color:#FF0000; 
+	padding:5px; 
+	width:250px; 
+	height:300px; 
+	overflow:auto; 
+	margin-top:2%;
+	margin-left: 2%;
+}
 
-      #lista_lojas ul{
-        /*list-style: none;
-        padding:0;
-        width: 100%;*/
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
+#lista_lojas ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
-      #lista_lojas a{
-        /*text-decoration: none;
-        background-color: #cccccc;
-        width: 100px;
-        display: block;*/
-        display: block;
-        padding: 5px 5px 5px 0.5em;
-        font-weight:bold;
-        border-left: 10px solid #f6f6f6;
-        /*border-right: 10px solid #f1f1f1;*/
-        background-color: #fff;
-        color: #808000;
-        text-decoration: none;
-      }
+#lista_lojas a{
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	font-weight:bold;
+	border-left: 10px solid #f6f6f6;
+	background-color: #fff;
+	color: #808000;
+	text-decoration: none;
+}
 
-      #lista_lojas a:hover{
-        background-color: #f6f6f6
-      }
+#lista_lojas a:hover{
+	background-color: #f6f6f6
+}
 
-      #lista_lojas li{
-        border-bottom: 1px solid #fff;
-        margin: 0;
-      }
+#lista_lojas li{
+	border-bottom: 1px solid #fff;
+	margin: 0;
+}
 
+
+#logo_loja{
+	margin: 1% auto 2% auto;
+	padding-left: 8%;
+}
+
+#lojas_container{
+	padding: 2%;
+	display: block;
+	background-color: #fff;
+	border-radius: 6px;
+	min-height: 320px;
+}
+
+#lojas_container p {
+	text-align: justify;
+}
+
+/*.lojas{
+	display: none;
+}*/
+
+.ocultar_lojas{
+	display: none;
+}
+
+
+.exibir_loja{
+	display: block;
+}
 
  /*##################
  * RODAPE
