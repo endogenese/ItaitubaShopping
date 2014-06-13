@@ -78,52 +78,8 @@
 			<div class="row" id="banner_home">
 
 				<div class="col-md-12">
-
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-						<ol class="carousel-indicators">
-						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						 
-						</ol>
-
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
-						    <div class="item active">
-						      <img src="http://placehold.it/1138x300" alt="...">
-						      <div class="carousel-caption">
-						        <h3>Slide 1</h3>
-    							<p>Descricação 1</p>
-						      </div>
-						    </div>
-
-						    <div class="item">
-						      <img src="http://placehold.it/1138x300" alt="...">
-						      <div class="carousel-caption">
-						        <h3>Slide 2</h3>
-    							<p>Descricação 2</p>
-						      </div>
-						    </div>
-
-						    <div class="item">
-						      <img src="http://placehold.it/1138x300" alt="...">
-						      <div class="carousel-caption">
-						        <h3>Slide 2</h3>
-    							<p>Descricação 2</p>
-						      </div>
-						    </div>
-						    
-						</div>
-
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-						    <span class="glyphicon glyphicon-chevron-left"></span>
-						  </a>
-						  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-						    <span class="glyphicon glyphicon-chevron-right"></span>
-						</a>
-					</div><!--/.carousel-->
+					<img src="http://placehold.it/1138x300" alt="...">
+					<!--  -->
 
 
 				</div>
@@ -131,14 +87,18 @@
 			</div><!--/#BANNER_HOME-->
 
 			<div class="row">
-				<div class="col-md-3">
-					<h2>FILTRO DE LOJAS</h2>
+				<div class="col-md-12">
+					<div id='filtro' class="btn-group btn-group-lg"><!-- btn-group-justified" -->
+						<a id="filtro_lojas" class="btn btn-default  btn-lg btn-primary filtro_ativo" role="button">Listar por Lojas</a>
+						<a id="filtro_categ" class="btn btn-default  btn-lg btn-primary" role="button">Listar por categorias</a>
+					</div>
+
 				</div>
 			</div>
 
 			<div class="row" id="corpo_loja">
 				<div class="col-md-3">
-					<div id="lista_lojas">
+					<div id="lista_lojas" class="ocultar">
 
 						<ul>
 			              <li><a id="loja1-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
@@ -153,7 +113,52 @@
 			              <li><a id="loja10-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
 			            </ul>
 			        
-					</div><!-- /#lojas -->
+					</div><!-- /#lista_lojas -->
+
+					 <div id="categoria_lojas" class="ocultar">
+
+						<ul>
+							<li id="categoria1">
+								<a href="#" class="submenu">Restaurante</a>
+								<ul>	
+									<li><a id="loja1-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
+			              			<li><a id="loja2-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
+								</ul>
+							</li>
+			              	
+			              	<li id="categoria2">
+								<a href="#" class="submenu">Eletrônicos</a>
+								<ul>	
+			              			<li><a id="loja3-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
+			              			<li><a id="loja4-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
+			              		</ul>
+							</li>
+							<li id="categoria3">
+								<a href="#" class="submenu">Roupas</a>
+								<ul>	
+			              			<li><a id="loja5-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
+			              			<li><a id="loja6-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
+			              		</ul>
+							</li>
+
+							<li id="categoria4">
+								<a href="#" class="submenu">Livraria</a>
+								<ul>	
+			              			<li><a id="loja7-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
+			              			<li><a id="loja8-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
+			              		</ul>
+							</li>
+
+							<li id="categoria5">
+								<a href="#" class="submenu">Livraria</a>
+								<ul>	
+					              <li><a id="loja9-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
+					              <li><a id="loja10-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
+					            </ul>
+							</li>
+			            </ul>
+			        
+					</div><!-- /#categoria_lojas -->
 				</div>
 
 				<div class="col-md-9">
@@ -267,7 +272,6 @@
 					
 					<p class="text-center">2014 - Itaituba Shopping - Todos os direitos reservados</p>
 					<p class="text-center"><small>Desenvolvido por <a href="http://wwww.endogense.com.br">Endogênese</a></small></p>
-					<p id="teste"></p>	
 
 				</div><!--/.rodape-->
 
@@ -285,79 +289,176 @@
 
 	    	$(document).ready(function(){
 
-	    		$('.lojas').addClass('ocultar_lojas');
+	    		$('.lojas').addClass('ocultar');
+	    		$('#lista_lojas').addClass('exibir');
 	    		
 	    		// var i = $('.lojas').length
 	    		// i=3;
-	    		
-	    		 $('#loja1-m').click(function(){
-	    			if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
 
-	    		 	$('#loja1').addClass('exibir_loja');	
+	    		$('#filtro_lojas').click(function(){
+	    			if($('#filtro_lojas').hasClass('filtro_ativo')==false){
+	    				$('#filtro_lojas').addClass('filtro_ativo');
+	    				$('#filtro_categ').removeClass('filtro_ativo');
+	    				$('#lista_lojas').addClass('exibir');
+	    				$('#categoria_lojas').removeClass('exibir');
+	    				
+	    			}
+	    		});
+
+
+	    		$('#filtro_categ').click(function(){
+	    			if($('#filtro_categ').hasClass('filtro_ativo')==false){
+	    				$('#filtro_categ').addClass('filtro_ativo');
+	    				$('#filtro_lojas').removeClass('filtro_ativo');
+	    				$('#categoria_lojas').addClass('exibir');
+	    				$('#lista_lojas').removeClass('exibir');
+	    				
+	    			}
+	    		});
+
+
+
+	    		 $('#loja1-m').click(function(){
+	    			if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja1').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja2-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja2').addClass('exibir_loja');	
+	    		 	$('#loja2').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja3-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja3').addClass('exibir_loja');	
+	    		 	$('#loja3').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja4-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja4').addClass('exibir_loja');	
+	    		 	$('#loja4').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja5-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja5').addClass('exibir_loja');	
+	    		 	$('#loja5').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja6-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja6').addClass('exibir_loja');	
+	    		 	$('#loja6').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja7-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja7').addClass('exibir_loja');	
+	    		 	$('#loja7').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja8-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja8').addClass('exibir_loja');	
+	    		 	$('#loja8').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja9-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja9').addClass('exibir_loja');	
+	    		 	$('#loja9').addClass('exibir');	
 	    		 });
 
 	    		 $('#loja10-m').click(function(){
-	    		 	if($('.lojas').hasClass('exibir_loja'))
-	    		 		$('.lojas').removeClass('exibir_loja');
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
 
-	    		 	$('#loja10').addClass('exibir_loja');	
+	    		 	$('#loja10').addClass('exibir');	
+	    		 });
+
+
+
+
+	    		 $('#loja1-mc').click(function(){
+	    			if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja1').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja2-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja2').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja3-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja3').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja4-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja4').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja5-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja5').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja6-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja6').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja7-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja7').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja8-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja8').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja9-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja9').addClass('exibir');	
+	    		 });
+
+	    		 $('#loja10-mc').click(function(){
+	    		 	if($('.lojas').hasClass('exibir'))
+	    		 		$('.lojas').removeClass('exibir');
+
+	    		 	$('#loja10').addClass('exibir');	
 	    		 });
 
 	    		// for(var i = 3 ; i<=3; i++ ){
@@ -371,6 +472,96 @@
 
 		    	// 	 $('#teste').text("sds"+i);
 	    		// }
+
+	    		$('#categoria1 .submenu').click(function(){
+	    		 	if($(this).hasClass('exibir')==false){
+		    	 		var index = $('#categoria1 .submenu').index(this);
+		    	 		$('#categoria1').eq(index).children('ul').slideDown(800);
+
+		    	 		$('#categoria1 .submenu').addClass('exibir');
+
+		    	 		if($(this).siblings('ul').size() > 0){
+		    	 			return false;
+		    	 		}
+		    			
+	    		 	}else{
+	    		 		 var index2 = $('#categoria1').index(this);
+	    		 		 $('#categoria1').eq(index2).children('ul').slideUp();
+	    		 		 $('#categoria1 .submenu').removeClass('exibir');
+	    		 	}
+	    		 });
+
+	    		$('#categoria2 .submenu').click(function(){
+	    		 	if($(this).hasClass('exibir')==false){
+		    	 		var index = $('#categoria2 .submenu').index(this);
+		    	 		$('#categoria2').eq(index).children('ul').slideDown(800);
+
+		    	 		$('#categoria2 .submenu').addClass('exibir');
+
+		    	 		if($(this).siblings('ul').size() > 0){
+		    	 			return false;
+		    	 		}
+		    			
+	    		 	}else{
+	    		 		 var index2 = $('#categoria2').index(this);
+	    		 		 $('#categoria2').eq(index2).children('ul').slideUp();
+	    		 		 $('#categoria2 .submenu').removeClass('exibir');
+	    		 	}
+	    		 });
+
+	    		$('#categoria3 .submenu').click(function(){
+	    		 	if($(this).hasClass('exibir')==false){
+		    	 		var index = $('#categoria3 .submenu').index(this);
+		    	 		$('#categoria3').eq(index).children('ul').slideDown(800);
+
+		    	 		$('#categoria3 .submenu').addClass('exibir');
+
+		    	 		if($(this).siblings('ul').size() > 0){
+		    	 			return false;
+		    	 		}
+		    			
+	    		 	}else{
+	    		 		 var index2 = $('#categoria3').index(this);
+	    		 		 $('#categoria3').eq(index2).children('ul').slideUp();
+	    		 		 $('#categoria3 .submenu').removeClass('exibir');
+	    		 	}
+	    		 });
+
+	    		$('#categoria4 .submenu').click(function(){
+	    		 	if($(this).hasClass('exibir')==false){
+		    	 		var index = $('#categoria4 .submenu').index(this);
+		    	 		$('#categoria4').eq(index).children('ul').slideDown(800);
+
+		    	 		$('#categoria4 .submenu').addClass('exibir');
+
+		    	 		if($(this).siblings('ul').size() > 0){
+		    	 			return false;
+		    	 		}
+		    			
+	    		 	}else{
+	    		 		 var index2 = $('#categoria4').index(this);
+	    		 		 $('#categoria4').eq(index2).children('ul').slideUp();
+	    		 		 $('#categoria4 .submenu').removeClass('exibir');
+	    		 	}
+	    		 });
+
+	    		$('#categoria5 .submenu').click(function(){
+	    		 	if($(this).hasClass('exibir')==false){
+		    	 		var index = $('#categoria5 .submenu').index(this);
+		    	 		$('#categoria5').eq(index).children('ul').slideDown(800);
+
+		    	 		$('#categoria5 .submenu').addClass('exibir');
+
+		    	 		if($(this).siblings('ul').size() > 0){
+		    	 			return false;
+		    	 		}
+		    			
+	    		 	}else{
+	    		 		 var index2 = $('#categoria5').index(this);
+	    		 		 $('#categoria5').eq(index2).children('ul').slideUp();
+	    		 		 $('#categoria5 .submenu').removeClass('exibir');
+	    		 	}
+	    		 });
 	    	});
 	    </script>
 
