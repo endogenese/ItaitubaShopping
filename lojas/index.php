@@ -35,10 +35,10 @@
 						<div id="menu_justificado" class="container-fluid hidden-xs">
 					        <ul class="nav navbar-nav ">
 						        <li><a href="/"><strong>HOME</strong></a></li>
-						        <li class="active"><a href="lojas/"><strong>LOJAS</strong></a></li>
-						        <li><a href="#"><strong>CINEMA</strong></a></li>
+						        <li class="active"><a href="/lojas/"><strong>LOJAS</strong></a></li>
+						        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 						        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-						        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+						        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 					        </ul>
 						</div>
 
@@ -63,9 +63,9 @@
 						        <ul class="nav navbar-nav ">
 							        <li><a href="/"><strong>HOME</strong></a></li>
 							        <li class="active"><a href="lojas/index.php"><strong>LOJAS</strong></a></li>
-							        <li><a href="#"><strong>CINEMA</strong></a></li>
+							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-							        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+							        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 						        </ul>
 						    </div><!--/.nav-collapse -->			
 						
@@ -78,7 +78,7 @@
 			<div class="row">
 
 				<div class="col-md-12">
-					<img src="http://placehold.it/1138x300" alt="...">
+					<img class="banner_page" src="http://placehold.it/1138x300" alt="...">
 					<!--  -->
 
 
@@ -86,10 +86,10 @@
 
 			</div><!--/#BANNER_LOJA-->
 
-			<div class="row">
+			<div class="row hidden-xs">
 				<div class="col-md-12">
-					<div id='filtro' class="btn-group btn-group-lg"><!-- btn-group-justified" -->
-						<a id="filtro_lojas" class="btn btn-default  btn-lg btn-primary filtro_ativo" role="button">Listar por Lojas</a>
+					<div class="btn-group btn-group-lg btn-group-ita"><!-- btn-group-justified" -->
+						<a id="filtro_lojas" class="btn btn-default  btn-lg btn-primary btn_ativo" role="button">Listar por Lojas</a>
 						<a id="filtro_categ" class="btn btn-default  btn-lg btn-primary" role="button">Listar por categorias</a>
 					</div>
 
@@ -286,7 +286,8 @@
 
 		<!-- Arquivos Javascripts
 	    ================================================== -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	    <script src="/js/jquery-1.11.0.min.js"></script>
 	    <script src="/js/bootstrap.min.js"></script>
 
 	    <script>
@@ -298,9 +299,9 @@
 
 	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR LOJAS'
 	    		$('#filtro_lojas').click(function(){
-	    			if($('#filtro_lojas').hasClass('filtro_ativo')==false){
-	    				$('#filtro_lojas').addClass('filtro_ativo');
-	    				$('#filtro_categ').removeClass('filtro_ativo');
+	    			if($('#filtro_lojas').hasClass('btn_ativo')==false){
+	    				$('#filtro_lojas').addClass('btn_ativo');
+	    				$('#filtro_categ').removeClass('btn_ativo');
 	    				$('#lista_lojas').addClass('exibir');
 	    				$('#categoria_lojas').removeClass('exibir');
 	    				
@@ -309,9 +310,9 @@
 
 	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR CATEGORIA'
 	    		$('#filtro_categ').click(function(){
-	    			if($('#filtro_categ').hasClass('filtro_ativo')==false){
-	    				$('#filtro_categ').addClass('filtro_ativo');
-	    				$('#filtro_lojas').removeClass('filtro_ativo');
+	    			if($('#filtro_categ').hasClass('btn_ativo')==false){
+	    				$('#filtro_categ').addClass('btn_ativo');
+	    				$('#filtro_lojas').removeClass('btn_ativo');
 	    				$('#categoria_lojas').addClass('exibir');
 	    				$('#lista_lojas').removeClass('exibir');
 	    				

@@ -12,6 +12,10 @@
 	display: block;
 }
 
+.banner_page{
+	width: 100%;
+}
+
  /*######################
  * AJUSTES DO MENU
  #######################*/
@@ -229,24 +233,34 @@
 }
 
 /*##################
- * FILTRO_LOJAS
+ * BOTÕES USADOS EM FILTRO_LOJAS E NA PAG CINEMA
 ##################*/
-#filtro{
-	margin: 2% 32.5% 2% 32.5%;
-	width: 100%;
+.btn-group-ita{
+	margin: 2% 0% 2% 29.5%;*/
+	/*margin: 2% 25% 2% 25%;*/
+	/*width: 100%;*/
 }
 
 .btn-primary{
 	/*margin-left: 3%;
 	margin-right: 3%;*/
-	width: 200px;
+	/*width: 200px;*/
+	width: 250px;
 }
 
-.filtro_ativo{
+.btn_ativo{
 	background-color: #3276b1;
 	border-color: #285e8e;
 	color: #fff;
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) inset;
+}
+
+#btn_prox_filmes{
+	width: 250px;
+}
+
+#btn_filmes_cartaz{
+	width: 250px;
 }
 
 
@@ -361,10 +375,7 @@
 /*CONFIGURAÇÃO DAS LOJAS*/
 
 /*configuração da imagem da loja*/
-#logo_loja{
-	margin: 1% auto 2% auto;
-	padding-left: 8%;
-}
+
 
 #lojas_container{
 	padding: 2%;
@@ -379,6 +390,86 @@
 	text-align: justify;
 }
 
+#logo_loja img{
+	width: 100%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+
+ /*##################
+ * CORPO CINEMA
+   ##################*/
+
+
+#cine_container{
+	padding: 2%;
+	display: block;
+	background-color: #fff;
+	border-radius: 6px;
+	min-height: 320px;
+}
+ 
+.filmes_cartaz{
+	margin-top: 2%;
+	margin-bottom: 4%;
+}
+.filmes_cartaz .img_filme img{
+	width: 230px;
+	height: 302px;
+	border: 1px solid rgb(0, 0, 0);
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto
+}
+
+.texto_filme{
+	text-align: justify;
+}
+
+.filmes_cartaz .texto_filme h3{
+	text-align: center;
+	margin-top: 1%;
+}
+
+.filmes_cartaz .sinopse{
+	display: block;
+	font-size: 0.85em;
+}
+
+.info_filme{
+	font-weight: bold;
+}
+
+.class_indi{
+	color: red;
+}
+
+.class_indi span{
+	font-weight: bold;
+}
+
+.prox_filmes  img{
+	width: 160px;
+	height: 213px;
+	border: 1px solid rgb(0, 0, 0);
+	/*display: inline;*/
+	margin-left: 1%; 
+	margin-right: 2%;
+	float: left;
+}
+
+.prox_filmes h3{
+	margin-top: 0px;
+}
+
+.prox_filmes .texto_filme{
+	float: left;
+
+}
 
  /*##################
  * RODAPE
@@ -390,11 +481,11 @@
 	background-color: #fff;
 	margin-bottom: 10px;
 	border-radius: 6px;
-}
+}.filmes_cartaz 
 
 /*Configuração do texto do rodape*/
 #rodape > p {
-	margin-top: 0px;
+	 margin-top: 0px;
 	margin-bottom: 0px;
 }
 

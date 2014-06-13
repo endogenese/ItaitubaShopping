@@ -36,10 +36,10 @@
 						<div id="menu_justificado" class="container-fluid hidden-xs">
 					        <ul class="nav navbar-nav ">
 						        <li class="active"><a href="/"><strong>HOME</strong></a></li>
-						        <li><a href="lojas/"><strong>LOJAS</strong></a></li>
-						        <li><a href="#"><strong>CINEMA</strong></a></li>
+						        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
+						        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 						        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-						        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+						        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 					        </ul>
 						</div>
 
@@ -63,10 +63,10 @@
 							<div class="collapse navbar-collapse">
 						        <ul class="nav navbar-nav ">
 							        <li class="active"><a href="/"><strong>HOME</strong></a></li>
-							        <li><a href="lojas/index.php"><strong>LOJAS</strong></a></li>
-							        <li><a href="#"><strong>CINEMA</strong></a></li>
+							        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
+							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-							        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+							        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 						        </ul>
 						    </div><!--/.nav-collapse -->			
 						

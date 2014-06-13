@@ -1,0 +1,154 @@
+<html lang="pt">
+	<head>
+		<meta charset="utf-8" />
+		<title>Itaituba Shopping</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="endogenese">
+
+	    <!-- Le styles -->
+	    <link href="/css/bootstrap.css" rel="stylesheet">
+
+		<link href="/css/template.css" rel="stylesheet">
+
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+
+	</head>
+
+
+	<body>
+
+		<div class="container">
+
+			<div class="row" id="menu">
+
+				<div class="col-md-12">
+					<nav class="navbar navbar-default" role="navigation">
+
+						<!-- menu justificado -->
+						<div id="menu_justificado" class="container-fluid hidden-xs">
+					        <ul class="nav navbar-nav ">
+						        <li><a href="/"><strong>HOME</strong></a></li>
+						        <li><a href="lojas/"><strong>LOJAS</strong></a></li>
+						        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
+						        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+						        <li class="active"><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
+					        </ul>
+						</div>
+
+						<!-- menu moblie -->
+						<div class="container-fluid visible-xs">
+
+							<div class="navbar-header">		        
+
+				        		<!-- Menu responsivo-->
+				        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						            <span class="sr-only">Toggle navigation</span>
+						            <span class="icon-bar"></span>
+						        	<span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						        </button>
+								
+								<!-- Esse brand será exibido na versão para phone -->
+								<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">Itaituba Shopping</a>
+							</div><!--/.navbar-header -->
+
+							<div class="collapse navbar-collapse">
+						        <ul class="nav navbar-nav ">
+							        <li><a href="/"><strong>HOME</strong></a></li>
+							        <li><a href="lojas/index.php"><strong>LOJAS</strong></a></li>
+							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
+							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+							        <li class="active"><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
+						        </ul>
+						    </div><!--/.nav-collapse -->			
+						
+						</div><!---/.container-fluid-->
+					</nav>
+				</div>
+
+			</div><!--/#menu-->
+
+			<div class="row">
+
+				<div class="col-md-12">
+					<img class="banner_page" src="http://placehold.it/1138x300" alt="...">
+					<!--  -->
+
+
+				</div>
+
+			</div><!--/#BANNER-->
+
+		
+			
+			<div class="col-md-12">
+				<div class="row" id="rodape">
+
+					<p class="text-center">Siga-nos nas redes sociais</p>
+					
+					<div id="redes_sociais">
+						<img src="/img/facebook.png" alt="Facebook"/>
+						<img src="/img/twitter.png" alt="Twitter"/>
+					</div>
+					
+					<p class="text-center">2014 - Itaituba Shopping - Todos os direitos reservados</p>
+					<p class="text-center"><small>Desenvolvido por <a href="http://wwww.endogense.com.br">Endogênese</a></small></p>
+
+				</div><!--/.rodape-->
+
+			</div>
+
+
+		</div> <!--/.CONTAINER-->
+
+		<!-- Arquivos Javascripts
+	    ================================================== -->
+	    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	    <script src="/js/jquery-1.11.0.min.js"></script>
+	    <script src="/js/bootstrap.min.js"></script>
+
+	    <script>
+
+	    	$(document).ready(function(){
+
+	    		// $('.lojas').addClass('ocultar'); //ESCONDE TODAS AS LOJAS
+	    		 $('.filmes_cartaz').addClass('exibir'); //EXIBE A LISTA LATERAL QUE EXIBE TODAS AS LOJAS
+
+	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR LOJAS'
+	    		$('#btn_filmes_cartaz').click(function(){
+	    			if($('.filmes_cartaz').hasClass('btn_ativo')==false){
+	    				$('#btn_filmes_cartaz').addClass('btn_ativo');
+	    				$('#btn_prox_filmes').removeClass('btn_ativo');
+	    				$('.filmes_cartaz').addClass('exibir');
+	    				$('.prox_filmes').removeClass('exibir');
+	    				
+	    			}
+	    		});
+
+	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR CATEGORIA'
+	    		$('#btn_prox_filmes').click(function(){
+	    			if($('.prox_filmes').hasClass('btn_ativo')==false){
+	    				$('#btn_prox_filmes').addClass('btn_ativo');
+	    				$('#btn_filmes_cartaz').removeClass('btn_ativo');
+	    				$('.prox_filmes').addClass('exibir');
+	    				$('.filmes_cartaz').removeClass('exibir');
+	    				
+	    			}
+	    		});
+
+
+	    		 
+	    	});
+	    </script>
+
+
+	</body>
+
+</html>
