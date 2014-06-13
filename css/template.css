@@ -3,9 +3,21 @@
  	background-image: url("../img/grey.png");
  }
 
+ .ocultar{
+	display: none;
+}
+
+
+.exibir{
+	display: block;
+}
+
  /*######################
  * AJUSTES DO MENU
  #######################*/
+
+
+/*MENU RESPONSIVO*/
 
 /*recua para baixo o menu*/
 #menu{
@@ -45,6 +57,21 @@
 	background-image: linear-gradient(to bottom, #78ACDC, #3B6FA8 );
     box-shadow: 0 3px 8px rgba(252, 252, 252, 0.4) inset;	
 }
+
+/*altera as cores no menu mobile*/
+.navbar-header .navbar-toggle {
+	background-color: #fff;
+	border-color: #000;
+}
+
+/*altera as cores no menu mobile*/
+.navbar-header .navbar-toggle .icon-bar {
+    background-color: #3B6FA8;
+}
+
+
+
+/*MENU JUSTIFICADO (SOMENTE PARA DESKTOP)*/
 
 /*expande a largura da lista para a largura no menu*/
 #menu_justificado, #menu_justificado .nav {
@@ -92,22 +119,6 @@
 	border-radius: 0 3px 3px 0;
 }
 
-/*altera as cores no menu mobile*/
-.navbar-header .navbar-toggle {
-	background-color: #fff;
-	border-color: #000;
-}
-
-/*altera as cores no menu mobile*/
-.navbar-header .navbar-toggle .icon-bar {
-    background-color: #3B6FA8;
-}
-
-
-/*.navbar-default .navbar-collapse{
-	border:0px solid;
-    border-color: rgba(0,0,0,1);
-}*/
 
  /*################
  * CORPO DA HOME
@@ -246,6 +257,8 @@
  * CORPO_LOJAS
 ##################*/
 
+/*LISTA DE TODAS AS LOJAS QUE APARECE NA LATERAL*/
+
 #lista_lojas { 
     border-collapse:collapse; 
     border:4px solid #006699; 
@@ -284,6 +297,8 @@
 	margin: 0;
 }
 
+
+/*LISTA DE CATEGORIAS APARECE NA LATERAL*/
 
 #categoria_lojas { 
     border-collapse:collapse; 
@@ -342,6 +357,10 @@
 }
 
 
+
+/*CONFIGURAÇÃO DAS LOJAS*/
+
+/*configuração da imagem da loja*/
 #logo_loja{
 	margin: 1% auto 2% auto;
 	padding-left: 8%;
@@ -355,22 +374,11 @@
 	min-height: 320px;
 }
 
+/*justifica o texto das lojas*/
 #lojas_container p {
 	text-align: justify;
 }
 
-/*.lojas{
-	display: none;
-}*/
-
-.ocultar{
-	display: none;
-}
-
-
-.exibir{
-	display: block;
-}
 
  /*##################
  * RODAPE

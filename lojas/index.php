@@ -75,7 +75,7 @@
 
 			</div><!--/#menu-->
 
-			<div class="row" id="banner_home">
+			<div class="row">
 
 				<div class="col-md-12">
 					<img src="http://placehold.it/1138x300" alt="...">
@@ -84,7 +84,7 @@
 
 				</div>
 
-			</div><!--/#BANNER_HOME-->
+			</div><!--/#BANNER_LOJA-->
 
 			<div class="row">
 				<div class="col-md-12">
@@ -98,6 +98,8 @@
 
 			<div class="row" id="corpo_loja">
 				<div class="col-md-3">
+
+					<!-- ESSE MENU É APRESENTADO QUANDO O BOTÃO 'LISTAR POR LOJA' ESTÁ ATIVO -->
 					<div id="lista_lojas" class="ocultar">
 
 						<ul>
@@ -114,7 +116,8 @@
 			            </ul>
 			        
 					</div><!-- /#lista_lojas -->
-
+						
+						<!-- ESSE MENU SÓ É APRESENTADO QUANDO O USUÁRIO CLICA NO BOTÃO 'LISTAR POR CATEGORIA' -->
 					 <div id="categoria_lojas" class="ocultar">
 
 						<ul>
@@ -160,7 +163,8 @@
 			        
 					</div><!-- /#categoria_lojas -->
 				</div>
-
+					
+					<!-- AQUI SÃO REREPRESENTADAS TODAS AS LOJAS DO SHOPPING -->
 				<div class="col-md-9">
 					<div id="lojas_container">
 
@@ -289,12 +293,10 @@
 
 	    	$(document).ready(function(){
 
-	    		$('.lojas').addClass('ocultar');
-	    		$('#lista_lojas').addClass('exibir');
-	    		
-	    		// var i = $('.lojas').length
-	    		// i=3;
+	    		$('.lojas').addClass('ocultar'); //ESCONDE TODAS AS LOJAS
+	    		$('#lista_lojas').addClass('exibir'); //EXIBE A LISTA LATERAL QUE EXIBE TODAS AS LOJAS
 
+	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR LOJAS'
 	    		$('#filtro_lojas').click(function(){
 	    			if($('#filtro_lojas').hasClass('filtro_ativo')==false){
 	    				$('#filtro_lojas').addClass('filtro_ativo');
@@ -305,7 +307,7 @@
 	    			}
 	    		});
 
-
+	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR CATEGORIA'
 	    		$('#filtro_categ').click(function(){
 	    			if($('#filtro_categ').hasClass('filtro_ativo')==false){
 	    				$('#filtro_categ').addClass('filtro_ativo');
@@ -317,70 +319,74 @@
 	    		});
 
 
+	    		 // ########################################
+	    		 // EVENTOS DAS LOJAS DA LISTA DE LOJAS
+	    		 // ########################################
 
+	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA PRIMEIRA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja1-m').click(function(){
 	    			if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja1').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEGUNDA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja2-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja2').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA TERCEIRA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja3-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja3').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUARTA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja4-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja4').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUINTA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja5-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja5').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEXTA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja6-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja6').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SÉTIMA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja7-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja7').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA OITAVA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja8-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja8').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA NONA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja9-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja9').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA DECIMA LOJA DA 'LISTA DE LOJAS'
 	    		 $('#loja10-m').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
@@ -388,72 +394,74 @@
 	    		 	$('#loja10').addClass('exibir');	
 	    		 });
 
+	    		 // ########################################
+	    		 // EVENTOS DAS LOJAS DA LISTA DE CATEGORIA
+	    		 // ########################################
 
-
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA PRIMEIRA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja1-mc').click(function(){
 	    			if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja1').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEGUNDA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja2-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja2').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA TERCEIRA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja3-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja3').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUARTA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja4-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja4').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUINTA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja5-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja5').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEXTA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja6-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja6').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SETIMA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja7-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja7').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA OITAVA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja8-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja8').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA NONA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja9-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
 
 	    		 	$('#loja9').addClass('exibir');	
 	    		 });
-
+	    		 //DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA DECIMA LOJA DA 'LISTA DE CATEGORIA'
 	    		 $('#loja10-mc').click(function(){
 	    		 	if($('.lojas').hasClass('exibir'))
 	    		 		$('.lojas').removeClass('exibir');
@@ -461,18 +469,12 @@
 	    		 	$('#loja10').addClass('exibir');	
 	    		 });
 
-	    		// for(var i = 3 ; i<=3; i++ ){
 
-		    	// 	 $('#loja'+i+'-m').click(function(){
-		    	// 	 	if($('.lojas').hasClass('exibir_loja'))
-		    	// 	 		$('.lojas').removeClass('exibir_loja');
+	    		 // ###############################
+	    		 // EVENTOS DAS CATEGORIAS DE LOJAS
+	    		 // ###############################
 
-		    	// 	 	$('#loja'+i).addClass('exibir_loja');	
-		    	// 	 });
-
-		    	// 	 $('#teste').text("sds"+i);
-	    		// }
-
+	    		 // DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA PRIMEIRA CATEGORIA DE LOJA
 	    		$('#categoria1 .submenu').click(function(){
 	    		 	if($(this).hasClass('exibir')==false){
 		    	 		var index = $('#categoria1 .submenu').index(this);
@@ -491,6 +493,7 @@
 	    		 	}
 	    		 });
 
+				// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEGUNDA CATEGORIA DE LOJA
 	    		$('#categoria2 .submenu').click(function(){
 	    		 	if($(this).hasClass('exibir')==false){
 		    	 		var index = $('#categoria2 .submenu').index(this);
@@ -509,6 +512,7 @@
 	    		 	}
 	    		 });
 
+	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA TERCEIRA CATEGORIA DE LOJA
 	    		$('#categoria3 .submenu').click(function(){
 	    		 	if($(this).hasClass('exibir')==false){
 		    	 		var index = $('#categoria3 .submenu').index(this);
@@ -527,6 +531,7 @@
 	    		 	}
 	    		 });
 
+	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUARTA CATEGORIA DE LOJA
 	    		$('#categoria4 .submenu').click(function(){
 	    		 	if($(this).hasClass('exibir')==false){
 		    	 		var index = $('#categoria4 .submenu').index(this);
@@ -545,6 +550,7 @@
 	    		 	}
 	    		 });
 
+	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUINTA CATEGORIA DE LOJA
 	    		$('#categoria5 .submenu').click(function(){
 	    		 	if($(this).hasClass('exibir')==false){
 		    	 		var index = $('#categoria5 .submenu').index(this);
