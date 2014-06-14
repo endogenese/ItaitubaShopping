@@ -32,7 +32,19 @@
 				<div class="col-md-12">
 					<nav class="navbar navbar-default" role="navigation">
 
-						<div class="container-fluid">
+						<!-- menu justificado -->
+						<div id="menu_justificado" class="container-fluid hidden-xs">
+					        <ul class="nav navbar-nav ">
+						        <li class="active"><a href="/"><strong>HOME</strong></a></li>
+						        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
+						        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
+						        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+						        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
+					        </ul>
+						</div>
+
+						<!-- menu moblie -->
+						<div class="container-fluid visible-xs">
 
 							<div class="navbar-header">		        
 
@@ -50,11 +62,11 @@
 
 							<div class="collapse navbar-collapse">
 						        <ul class="nav navbar-nav ">
-							        <li class="active"><a href="#"><strong>HOME</strong></a></li>
-							        <li><a href="lojas.php"><strong>LOJAS</strong></a></li>
-							        <li><a href="#"><strong>CINEMA</strong></a></li>
+							        <li class="active"><a href="/"><strong>HOME</strong></a></li>
+							        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
+							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
-							        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+							        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 						        </ul>
 						    </div><!--/.nav-collapse -->			
 						
@@ -64,7 +76,7 @@
 
 			</div><!--/#menu-->
 
-			<div class="row" id="banner_home">
+			<div class="row col-md" id="banner_home">
 
 				<div class="col-md-12">
 
@@ -181,10 +193,10 @@
 					</div><!-- #NOVIDADES HOME -->
 				</div>
 
-				<div id="esquerda_corpo_home" class="col-md-5 hidden-xs">
+				<div id="esquerda_corpo_home" class="col-md-5">
 					
 					<div class="row">
-						<div id="fotos_home">
+						<div id="fotos_home" class="hidden-xs">
 						
 							<h2 class="text-center">Confira as fotos do shopping</h2>
 							
@@ -296,7 +308,8 @@
 
 		<!-- Arquivos Javascripts
 	    ================================================== -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	    <script src="js/jquery-1.11.0.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="js/galleria/galleria-1.3.5.min.js"></script>
 	    <script type="text/javascript">
