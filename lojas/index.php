@@ -118,48 +118,48 @@
 					</div><!-- /#lista_lojas -->
 						
 						<!-- ESSE MENU SÓ É APRESENTADO QUANDO O USUÁRIO CLICA NO BOTÃO 'LISTAR POR CATEGORIA' -->
-					 <div id="categoria_lojas" class="ocultar">
+					 <div id="categoria_lojas">
 
-						<ul>
-							<li id="categoria1">
 								<a href="#" class="submenu">Restaurante</a>
-								<ul>	
-									<li><a id="loja1-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
-			              			<li><a id="loja2-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
-								</ul>
-							</li>
-			              	
-			              	<li id="categoria2">
+								<div class="tgl">
+									<ul>	
+										<li><a id="loja1-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
+				              			<li><a id="loja2-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
+									</ul>
+								</div>
+							
 								<a href="#" class="submenu">Eletrônicos</a>
-								<ul>	
-			              			<li><a id="loja3-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
-			              			<li><a id="loja4-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
-			              		</ul>
-							</li>
-							<li id="categoria3">
+								<div class="tgl">
+									<ul>	
+				              			<li><a id="loja3-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
+				              			<li><a id="loja4-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
+				              		</ul>
+			              		</div>
+							
 								<a href="#" class="submenu">Roupas</a>
-								<ul>	
-			              			<li><a id="loja5-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
-			              			<li><a id="loja6-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
-			              		</ul>
-							</li>
-
-							<li id="categoria4">
+								<div class="tgl">
+									<ul>	
+				              			<li><a id="loja5-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
+				              			<li><a id="loja6-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
+				              		</ul>
+			              		</div>
+							
 								<a href="#" class="submenu">Livraria</a>
-								<ul>	
-			              			<li><a id="loja7-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
-			              			<li><a id="loja8-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
-			              		</ul>
-							</li>
-
-							<li id="categoria5">
+								<div class="tgl">
+									<ul>	
+				              			<li><a id="loja7-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
+				              			<li><a id="loja8-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
+				              		</ul>
+			              		</div>
+							
 								<a href="#" class="submenu">Livraria</a>
-								<ul>	
-					              <li><a id="loja9-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
-					              <li><a id="loja10-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
-					            </ul>
-							</li>
-			            </ul>
+								<div class="tgl">
+									<ul>	
+						              <li><a id="loja9-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
+						              <li><a id="loja10-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
+						            </ul>
+					        	</div>
+							
 			        
 					</div><!-- /#categoria_lojas -->
 				</div>
@@ -292,9 +292,16 @@
 
 	    <script>
 
-	    	$(document).ready(function(){
+	    	
+		    jQuery.fn.toggleText = function(a,b) {
+		    	return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;
+	    	}));
+}
 
+	    	$(document).ready(function(){
+	    		
 	    		$('.lojas').addClass('ocultar'); //ESCONDE TODAS AS LOJAS
+	    		$('#categoria_lojas').addClass('ocultar'); //ESCONDE DE CATEGORIA DE LOJAS
 	    		$('#lista_lojas').addClass('exibir'); //EXIBE A LISTA LATERAL QUE EXIBE TODAS AS LOJAS
 
 	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR LOJAS'
@@ -475,100 +482,14 @@
 	    		 // EVENTOS DAS CATEGORIAS DE LOJAS
 	    		 // ###############################
 
-	    		 // DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA PRIMEIRA CATEGORIA DE LOJA
-	    		$('#categoria1 .submenu').click(function(){
-	    		 	if($(this).hasClass('exibir')==false){
-		    	 		var index = $('#categoria1 .submenu').index(this);
-		    	 		$('#categoria1').eq(index).children('ul').slideDown(800);
-
-		    	 		$('#categoria1 .submenu').addClass('exibir');
-
-		    	 		if($(this).siblings('ul').size() > 0){
-		    	 			return false;
-		    	 		}
-		    			
-	    		 	}else{
-	    		 		 var index2 = $('#categoria1').index(this);
-	    		 		 $('#categoria1').eq(index2).children('ul').slideUp();
-	    		 		 $('#categoria1 .submenu').removeClass('exibir');
-	    		 	}
-	    		 });
-
-				// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA SEGUNDA CATEGORIA DE LOJA
-	    		$('#categoria2 .submenu').click(function(){
-	    		 	if($(this).hasClass('exibir')==false){
-		    	 		var index = $('#categoria2 .submenu').index(this);
-		    	 		$('#categoria2').eq(index).children('ul').slideDown(800);
-
-		    	 		$('#categoria2 .submenu').addClass('exibir');
-
-		    	 		if($(this).siblings('ul').size() > 0){
-		    	 			return false;
-		    	 		}
-		    			
-	    		 	}else{
-	    		 		 var index2 = $('#categoria2').index(this);
-	    		 		 $('#categoria2').eq(index2).children('ul').slideUp();
-	    		 		 $('#categoria2 .submenu').removeClass('exibir');
-	    		 	}
-	    		 });
-
-	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA TERCEIRA CATEGORIA DE LOJA
-	    		$('#categoria3 .submenu').click(function(){
-	    		 	if($(this).hasClass('exibir')==false){
-		    	 		var index = $('#categoria3 .submenu').index(this);
-		    	 		$('#categoria3').eq(index).children('ul').slideDown(800);
-
-		    	 		$('#categoria3 .submenu').addClass('exibir');
-
-		    	 		if($(this).siblings('ul').size() > 0){
-		    	 			return false;
-		    	 		}
-		    			
-	    		 	}else{
-	    		 		 var index2 = $('#categoria3').index(this);
-	    		 		 $('#categoria3').eq(index2).children('ul').slideUp();
-	    		 		 $('#categoria3 .submenu').removeClass('exibir');
-	    		 	}
-	    		 });
-
-	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUARTA CATEGORIA DE LOJA
-	    		$('#categoria4 .submenu').click(function(){
-	    		 	if($(this).hasClass('exibir')==false){
-		    	 		var index = $('#categoria4 .submenu').index(this);
-		    	 		$('#categoria4').eq(index).children('ul').slideDown(800);
-
-		    	 		$('#categoria4 .submenu').addClass('exibir');
-
-		    	 		if($(this).siblings('ul').size() > 0){
-		    	 			return false;
-		    	 		}
-		    			
-	    		 	}else{
-	    		 		 var index2 = $('#categoria4').index(this);
-	    		 		 $('#categoria4').eq(index2).children('ul').slideUp();
-	    		 		 $('#categoria4 .submenu').removeClass('exibir');
-	    		 	}
-	    		 });
-
-	    		// DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO DA QUINTA CATEGORIA DE LOJA
-	    		$('#categoria5 .submenu').click(function(){
-	    		 	if($(this).hasClass('exibir')==false){
-		    	 		var index = $('#categoria5 .submenu').index(this);
-		    	 		$('#categoria5').eq(index).children('ul').slideDown(800);
-
-		    	 		$('#categoria5 .submenu').addClass('exibir');
-
-		    	 		if($(this).siblings('ul').size() > 0){
-		    	 			return false;
-		    	 		}
-		    			
-	    		 	}else{
-	    		 		 var index2 = $('#categoria5').index(this);
-	    		 		 $('#categoria5').eq(index2).children('ul').slideUp();
-	    		 		 $('#categoria5 .submenu').removeClass('exibir');
-	    		 	}
-	    		 });
+	    		 $('.tgl').css('display', 'none')
+	    		 $('.submenu').click(function() {
+					$(this).next().slideToggle('slow')
+					.siblings('.tgl:visible').slideToggle('fast');
+					$(this).siblings('.submenu').next('.tgl:visible').prev()
+				
+				});
+	    		
 	    	});
 	    </script>
 

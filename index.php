@@ -313,10 +313,11 @@
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="js/galleria/galleria-1.3.5.min.js"></script>
 	    <script type="text/javascript">
-		    Galleria.ready(function(options) {
+		    // Slider  automatico da galeria de fotos
+		    // Galleria.ready(function(options) {
 
-	            this.play(5000);
-	        });
+	     //        this.play(5000);
+	     //    });
 
 		    // Load the classic theme
 		    Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
