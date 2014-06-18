@@ -99,6 +99,7 @@
 			<div class="row" id="corpo_loja">
 				<div class="col-md-3">
 
+					<input type='text' id="txtBusca" class="form-control" placeholder="Buscar Loja">
 					<!-- ESSE MENU É APRESENTADO QUANDO O BOTÃO 'LISTAR POR LOJA' ESTÁ ATIVO -->
 					<div id="lista_lojas" class="ocultar">
 
@@ -304,25 +305,57 @@
 	    		$('#categoria_lojas').addClass('ocultar'); //ESCONDE DE CATEGORIA DE LOJAS
 	    		$('#lista_lojas').addClass('exibir'); //EXIBE A LISTA LATERAL QUE EXIBE TODAS AS LOJAS
 
+
+	    		// ###################
+	    		// BUSCA DE LOJAS
+	    		// ###################
+	    		 $('#txtBusca').keyup(function(){
+
+	    		 	// exibe a lista de todas as lojas caso essa esteja oculta
+	    		 	if($('#filtro_categ').hasClass('btn_ativo')){
+	    		 		$('#filtro_lojas').addClass('btn_ativo');
+	    				$('#filtro_categ').removeClass('btn_ativo');
+	    				$('#lista_lojas').addClass('exibir');
+	    				$('#categoria_lojas').removeClass('exibir');
+	    		 	}
+
+	    		 	var texto = $(this).val();//pega o valor informado no campo de busca
+
+	    		 	$("#lista_lojas ul li").css("display", "block");// exibe todos os componentes da lista de lojas
+					$("#lista_lojas ul li").each(function(){// trata cada item da lista quando esta for percorrida para que se realize o filtro
+
+						if($(this).text().toUpperCase().indexOf(texto.toUpperCase()) < 0) //verifica-se se o item da lista acessado na iteração atual da função each contém o texto digitado no input
+
+						   $(this).css("display", "none");//caso o item não contenha o texto buscado, ele é então ocultado
+
+					});
+				});
+
+
+				// ###################
+	    		// AÇÕES DOS BOTÕES ABAIXO DA LOGO
+	    		// ###################
+
 	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR LOJAS'
 	    		$('#filtro_lojas').click(function(){
+	    			$('#txtBusca').val("");
+	    			$("#lista_lojas ul li").css("display", "block");
 	    			if($('#filtro_lojas').hasClass('btn_ativo')==false){
 	    				$('#filtro_lojas').addClass('btn_ativo');
 	    				$('#filtro_categ').removeClass('btn_ativo');
 	    				$('#lista_lojas').addClass('exibir');
 	    				$('#categoria_lojas').removeClass('exibir');
-	    				
 	    			}
 	    		});
 
 	    		//DEFINE AS AÇÕES QUE OCORRERÃO QUANDO O USUÁRIO CLICAR NO BOTÃO 'LISTAR POR CATEGORIA'
 	    		$('#filtro_categ').click(function(){
+	    			$('#txtBusca').val("");
 	    			if($('#filtro_categ').hasClass('btn_ativo')==false){
 	    				$('#filtro_categ').addClass('btn_ativo');
 	    				$('#filtro_lojas').removeClass('btn_ativo');
 	    				$('#categoria_lojas').addClass('exibir');
 	    				$('#lista_lojas').removeClass('exibir');
-	    				
 	    			}
 	    		});
 
