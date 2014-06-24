@@ -8,9 +8,9 @@
 	    <meta name="author" content="endogenese">
 
 	    <!-- Le styles -->
-	    <link href="css/bootstrap.css" rel="stylesheet">
+	    <link href="/css/bootstrap.css" rel="stylesheet">
 
-		<link href="css/template.css" rel="stylesheet">
+		<link href="/css/template.css" rel="stylesheet">
 
 	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,6 +25,18 @@
 
 	<body>
 
+		<?php
+		// chamada do TimThumb
+		//require 'timthumb.php';
+
+		//chamada WordPress
+		define('WP_USE_THEMES', false);
+		require('/blog/wp-load.php');
+		 
+		//Define quantos posts serão exibidos
+		query_posts('showposts=3');
+		?>
+
 		<div class="container">
 
 			<div class="row" id="menu">
@@ -38,7 +50,7 @@
 						        <li class="active"><a href="/"><strong>HOME</strong></a></li>
 						        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
 						        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
-						        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+						        <li><a href="/blog"><strong>NOVIDADES</strong></a></li>
 						        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 					        </ul>
 						</div>
@@ -65,7 +77,7 @@
 							        <li class="active"><a href="/"><strong>HOME</strong></a></li>
 							        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
 							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
-							        <li><a href="#"><strong>NOVIDADES</strong></a></li>
+							        <li><a href="/blog"><strong>NOVIDADES</strong></a></li>
 							        <li><a href="/quem_somos.html"><strong>QUEM SOMOS</strong></a></li>
 						        </ul>
 						    </div><!--/.nav-collapse -->			
@@ -140,22 +152,37 @@
 						<h2 class="text-center">Itaituba Shopping Notícias</h2>
 
 						<ul class="media-list">
+							<?php while (have_posts()): the_post(); ?>
+							
 							<li class="media">
-						        <a class="pull-left" href="#">
-						        <img class="media-object img-rounded" src="http://placehold.it/150x160">
+						        <a class="pull-left caixa_img_noticia" href="#">
+						        	<!-- <img class="media-object img-rounded" src="http://placehold.it/150x160"> -->
+						        	<?php //the_post_thumbnail( array(150,160) ); 
+						        	//the_post_thumbnail()
+						        	if(get_the_post_thumbnail()==null){
+						        		echo "<img class='media-object img_padrao_noticia' src='/img/logo_itashop.png.'>";
+						        	}else{
+						        		$domsxe = simplexml_load_string(get_the_post_thumbnail());
+										$thumbnailsrc = $domsxe->attributes()->src; 
+										
+						        		the_post_thumbnail( array(150,160) );
+						        	}
+						        	?><!-- chama a imagem do post -->
 						        </a>
 
 						        <div class="media-body">
-							        <h3 class="media-heading">Notícia 1</h3>
-							        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
-							        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
-							    	Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-							    	</p>	
-							    	<a class="btn btn-danger" href="#">Saiba Mais »</a>
+							        <h3 class="media-heading"><?php the_title(); ?></h3> <!-- chama o título do post -->
+							        <span><?php the_time("d/m/Y"); ?></span> <!-- chama a data do post -->
+							        <p>
+							        	<?php the_excerpt(); ?><!-- chama o post -->
+							    	</p>
+							    	<a class="btn btn-danger" href="<?php the_permalink(); ?>">Saiba Mais »</a> <!-- chama o link do post -->
 						        </div>
 						    </li>
 
-							<li class="media">
+						    <?php endwhile;?>
+
+							<!-- <li class="media">
 						        <a class="pull-left" href="#">
 						        <img class="media-object img-rounded" src="http://placehold.it/150x160">
 						        </a>
@@ -183,11 +210,11 @@
 							    	</p>	
 							    	<a class="btn btn-danger" href="#">Saiba Mais »</a>
 						        </div>
-						    </li>
+						    </li> -->
 						</ul><!-- ul media-list-->
 
 						<div id="mais_noticias" class="">
-							<a href="#" class="text-center" ><h3>Mais Notícias</h3></a>
+							<a href="/blog" class="text-center" ><h3>Mais Notícias</h3></a>
 						</div>
 
 					</div><!-- #NOVIDADES HOME -->
