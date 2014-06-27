@@ -16,6 +16,12 @@
 	width: 100%;
 }
 
+.container{
+	background: none repeat scroll 0 0 rgba(135, 189, 240, 0.2);
+	padding-left: 0;
+	padding-right: 0;
+}
+
  /*######################
  * AJUSTES DO MENU
  #######################*/
@@ -130,7 +136,8 @@
 
 /*Configurações básicas do painel de Notícias(novidades)*/
 #novidades_home{
-	background-color: rgba(135, 189, 240, 0.6);
+	/*background-color: rgba(135, 189, 240, 0.1);*/
+	 background: none repeat scroll 0 0 rgba(135, 189, 240, 0.2);
 	min-height: 480px;
 	border-radius: 6px;
 	padding-bottom: 1%;
@@ -150,6 +157,15 @@
 	padding: 10px;
 	border-radius: 6px;
 	display: block;
+}
+
+
+.caixa_img_noticia{
+	position: relative;
+	/*left: -75px;*/
+	overflow: hidden; 
+	width: 150px; 
+	height: 160px;
 }
 
 /*Configuração do botão mais novidades*/
@@ -230,6 +246,12 @@
 	width: 420px;
 	height: 240px;
 	margin-left: 7%;
+}
+
+/*img padrão para os posts sem imagem destaca*/
+.img_padrao_noticia{
+	width: 150px;
+	height: 160px;
 }
 
 /*##################
@@ -313,7 +335,7 @@
 
 
 /*LISTA DE CATEGORIAS APARECE NA LATERAL*/
-
+	
 #categoria_lojas { 
     border-collapse:collapse; 
 	border:4px solid #006699; 
@@ -354,20 +376,22 @@
 
 
 #categoria_lojas ul li ul{
-	display: none;
+	/*display: none;*/
 }
 
 #categoria_lojas .submenu{
-	background-color: #006699;
+	background-color: #428bca;
 	font-size: 1.2em;
 	color: #fff;
 	border-radius: 4px;
-	border-left: 10px solid #006699;
+	border-left: 10px solid #3276b1;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 #categoria_lojas .submenu:hover{
-	background-color: #003399;
-	border-left: 10px solid #003399;
+	background-color: #3276b1;
+	/*border-left: 10px solid #285e8e;*/
 }
 
 
@@ -470,6 +494,19 @@
 	float: left;
 
 }
+
+ /*##################
+ * BLOG
+   ##################*/
+
+   /*IMG da página do post notícia*/
+.img_post_single{
+	display:block;
+	margin: 10px auto 10px auto;
+	width: 100%;
+}
+
+
 
  /*##################
  * RODAPE
