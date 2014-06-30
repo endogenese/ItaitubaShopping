@@ -58,7 +58,7 @@
         <?php $categories_list = get_the_category_list( __( ', ', 'foghorn' ) );
 		if ( '' != $categories_list ) { ?>
             <div class="categories">
-                <span>Categorized:</span> <?php echo $categories_list; ?>
+                <span>Categorizado:</span> <?php echo $categories_list; ?>
             </div>
         <?php } ?>
         <?php $tag_list = get_the_tag_list( '', ', ' );

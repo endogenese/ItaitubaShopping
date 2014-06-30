@@ -86,7 +86,7 @@ add_filter( 'excerpt_length', 'foghorn_excerpt_length' );
  */
  
 function foghorn_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue lendo <span class="meta-nav">&rarr;</span>', 'foghorn' ) . '</a>';
+	//return ' <a href="'. get_permalink() . '">' . __( 'Continue lendo <span class="meta-nav">&rarr;</span>', 'foghorn' ) . '</a>';
 }
 
 /**
@@ -192,7 +192,7 @@ function foghorn_comment( $comment, $args, $depth ) {
 
 						echo get_avatar( $comment, $avatar_size );
 
-						printf( __( '%1$s on %2$s%3$s at %4$s%5$s <span class="says">said:</span>', 'foghorn' ),
+						printf( __( '%1$s em %2$s%3$s ás %4$s%5$s <span class="says">disse:</span>', 'foghorn' ),
 							sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ),
 							'<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '"><time pubdate datetime="' . get_comment_time( 'c' ) . '">',
 							get_comment_date(),
@@ -205,7 +205,7 @@ function foghorn_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'foghorn' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( 'Seu comentário está aguardando a moderação.', 'foghorn' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -214,7 +214,7 @@ function foghorn_comment( $comment, $args, $depth ) {
 			<div class="comment-content"><?php comment_text(); ?></div>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply &darr;', 'foghorn' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Resposta &darr;', 'foghorn' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 
