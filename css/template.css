@@ -537,6 +537,9 @@
 	font-weight: bold;
 }
 
+.prox_filmes{
+	margin: 4% 1%;
+}
 .prox_filmes  img{
 	width: 160px;
 	height: 213px;
