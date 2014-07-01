@@ -75,7 +75,7 @@
 
 </head>
 
-<body <?php /*<?php body_class(); ?>>
+<body> <?php /*<?php body_class(); ?>>
 
 	
 <div id="page" class="hfeed">
@@ -140,7 +140,7 @@
 
 							<div class="collapse navbar-collapse">
 						        <ul class="nav navbar-nav ">
-							        <li class="active"><a href="/"><strong>HOME</strong></a></li>
+							        <li><a href="/"><strong>HOME</strong></a></li>
 							        <li><a href="/lojas/"><strong>LOJAS</strong></a></li>
 							        <li><a href="/cinema.html"><strong>CINEMA</strong></a></li>
 							        <li class="active"><a href="/blog"><strong>NOVIDADES</strong></a></li>

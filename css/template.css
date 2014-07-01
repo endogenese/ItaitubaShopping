@@ -56,12 +56,16 @@
 
 /*define um fundo diferente para o item do menu selecionado*/
 .collapse .nav > .active > a, .navbar-collapse .nav > .active > a:hover, .collapse .nav > .active > a:focus {
+    background-color: #325E8D;
     background-image: linear-gradient(to bottom, #3885CB, #325E8D);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
     color: #FFF;
     text-decoration: none;
 }
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #fc0;
+}
 .collapse .nav a:hover, .collapse .nav a:focus{
 	color: #fc0;
 	background-image: linear-gradient(to bottom, #78ACDC, #3B6FA8 );
@@ -77,6 +81,15 @@
 /*altera as cores no menu mobile*/
 .navbar-header .navbar-toggle .icon-bar {
     background-color: #3B6FA8;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fc0;
+	background-image: linear-gradient(to bottom, #3885CB, #325E8D);
+}
+
+.navbar-default .navbar-nav > li> a{
+	color: #fff
 }
 
 
@@ -134,10 +147,26 @@
  * CORPO DA HOME
  *#################*/
 
+ #corpo_home h2{
+ 	/*color: #990000;*/
+ 	color: #333;
+ 	margin: 0% 0 2% 0;
+	text-align: center;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+ }
+
 /*Configurações básicas do painel de Notícias(novidades)*/
 #novidades_home{
 	/*background-color: rgba(135, 189, 240, 0.1);*/
-	 background: none repeat scroll 0 0 rgba(135, 189, 240, 0.2);
+	 /*background: none repeat scroll 0 0 rgba(135, 189, 240, 0.2);*/
+	margin: auto;
+	width: 98%;
+	border: 1px solid rgba(135, 189, 240, 0.3);
+	margin-top: 10px;
 	min-height: 480px;
 	border-radius: 6px;
 	padding-bottom: 1%;
@@ -145,8 +174,14 @@
 }
 
 /*Cor da head do painel de noticias*/
-#novidades_home h2{
+/*#novidades_home h2{
 	color: #990000;
+}*/
+
+/*img padrão para os posts sem imagem destaca*/
+.img_padrao_noticia{
+	width: 150px;
+	height: 160px;
 }
 
 /*Configuração das noticias(novidades)*/
@@ -172,10 +207,11 @@
 #mais_noticias{
 	background-color: #fff;
 	width: 97%;
-	height: 30px;
+	height: 24px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 6px;
+	padding-top: 0px;
 
 	/*padding-top: 2px;
 	padding-bottom: 5px;	*/
@@ -196,20 +232,24 @@
 /*Alinhamento da coluna direita da página*/
 #esquerda_corpo_home > .row{
 	margin-right: 0px;
+	margin-left: 0px;
 }
 
 /*Configurações básicas do painel de Fotos*/
 #fotos_home{
-	background-color: rgba(135, 189, 240, 0.6);
-	height: 350px;
+	/*background-color: rgba(135, 189, 240, 0.6);*/
+	border: 1px solid rgba(135, 189, 240, 0.3);
+	margin: 10px auto;
+	width: 98%;
+/*	margin-right: 1%;*/
+	height: 380px;
 	border-radius: 6px;
-	margin-top: 10px;
 }
 
 /*Cor da head do painel de fotos*/
-#fotos_home h2{
+/*#fotos_home h2
 	color: #990000;
-}
+}*/
 
 /*Configuração do plugin de fotos*/
  #galleria{
@@ -227,19 +267,23 @@
 
 /*Configuração do painel do mapa*/
 #mapa_ita{
-	background-color: rgba(135, 189, 240, 0.6);
+	/*background-color: rgba(135, 189, 240, 0.6);*/
+	border: 1px solid rgba(135, 189, 240, 0.3);
 	height: 310px;
+	width: 98%;
+	margin: 10px auto;
 	border-radius: 6px;
-	margin-top: 10px;
+/*	margin-right: 1%;
+	margin-top: 10px;*/
 }
 
 /*Define cor e alinhamento do head do painel do mapa*/
-#mapa_ita h2{
+/*#mapa_ita h2{
 	margin: 2% 0 2% 0;
 	text-align: center;
 	color:#990000;
 }
-
+*/
 /*Configuração do map*/
 #mapa_ita iframe{
 	margin:auto;
@@ -248,19 +292,14 @@
 	margin-left: 7%;
 }
 
-/*img padrão para os posts sem imagem destaca*/
-.img_padrao_noticia{
-	width: 150px;
-	height: 160px;
-}
 
 /*##################
  * BOTÕES USADOS EM FILTRO_LOJAS E NA PAG CINEMA
 ##################*/
 .btn-group-ita{
-	margin: 2% 0% 2% 29.5%;*/
-	/*margin: 2% 25% 2% 25%;*/
-	/*width: 100%;*/
+	margin: 2% auto;
+	display: block;
+	width: 500px;
 }
 
 .btn-primary{
@@ -295,17 +334,32 @@
 
 /*LISTA DE TODAS AS LOJAS QUE APARECE NA LATERAL*/
 
+#menu_loja{
+	background-color: #fff;
+	/*margin: 5px 2.2%;*/
+	margin: 5px 5px;
+	border: 1px solid rgba(135, 189, 240, 0.3);
+	border-radius: 6px;
+	/*width: 95.6%;*/
+	width: 98.5%;
+}
+
+#txtBusca{
+	width:93%;
+	margin: 2% auto;
+}
+
 #lista_lojas { 
     border-collapse:collapse; 
-    border:4px solid #006699; 
+    border:1px solid #006699; 
     background-color:#FFFFFF;
 	color:#FF0000; 
 	padding:5px; 
-	width:250px; 
-	height:300px; 
+	width:93%;
+	height:300px;
 	overflow:auto; 
-	margin-top:2%;
-	margin-left: 2%;
+	margin:2% auto;
+	/*margin-left: 2%;*/
 }
 
 #lista_lojas ul{
@@ -338,15 +392,14 @@
 	
 #categoria_lojas { 
     border-collapse:collapse; 
-	border:4px solid #006699; 
+	border:1px solid #006699;  
     background-color:#FFFFFF;
 	color:#FF0000; 
 	padding:5px; 
-	width:250px; 
-	height:300px; 
+	width:93%;
+	height:300px;
 	overflow:auto; 
-	margin-top:2%;
-	margin-left: 2%;
+	margin:2% auto;
 }
 
 #categoria_lojas ul{
@@ -403,10 +456,13 @@
 
 #lojas_container{
 	padding: 2%;
+	margin: 5px 1%;
 	display: block;
 	background-color: #fff;
 	border-radius: 6px;
-	min-height: 320px;
+	min-height: 300px;
+	width: 98%;
+	/*margin: 1%;*/
 }
 
 /*justifica o texto das lojas*/
@@ -430,16 +486,21 @@
 
 
 #cine_container{
-	padding: 2%;
+	/*padding: 0% 2% 2% 2%;*/
 	display: block;
-	background-color: #fff;
+	width: 100%;
+	/*background-color: #fff;
 	border-radius: 6px;
-	min-height: 320px;
+	min-height: 320px;*/
 }
  
 .filmes_cartaz{
-	margin-top: 2%;
-	margin-bottom: 4%;
+	padding-top: 2%;
+	margin: 2% auto;
+	padding-bottom: 1%;
+	background-color: #fff;
+	border-radius: 6px;
+	width: 98.5%;
 }
 .filmes_cartaz .img_filme img{
 	width: 230px;
@@ -476,6 +537,9 @@
 	font-weight: bold;
 }
 
+.prox_filmes{
+	margin: 4% 1%;
+}
 .prox_filmes  img{
 	width: 160px;
 	height: 213px;
@@ -492,6 +556,9 @@
 
 .prox_filmes .texto_filme{
 	float: left;
+	background-color: #fff;
+	border-radius: 6px;
+	padding: 2%;
 
 }
 
@@ -506,6 +573,40 @@
 	width: 100%;
 }
 
+/*Conteúdo do blog*/
+#primary{
+	margin: 1%;
+	width: 98%
+}
+
+/*Painel lateral*/
+#secondary > aside{
+ margin-left: -4%;
+ margin-right: 5%;
+ background:rgba(255, 255, 255,0.9);
+ border: 1px solid rgba(0, 0, 0,0.2);
+}
+
+#respond input[type="text"] {
+    height: 32px;
+}
+
+#respond .comment-form-author .required, #respond .comment-form-email .required {
+    left: 10%;
+}
+
+#respond input[type="text"], #respond textarea {;
+    text-indent: 65px;
+}
+
+.widget-title{
+	color: #222
+}
+
+.page-title{
+	color: #222	
+}
+
 
 
  /*##################
@@ -514,7 +615,9 @@
 
 /*Configuração do rodape*/
 #rodape{
-	margin-top: 20px;
+	margin: 20px 7px 10px 7px;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	background-color: #fff;
 	margin-bottom: 10px;
 	border-radius: 6px;
@@ -539,4 +642,12 @@
 #rodape #redes_sociais img{
 	height: 30px;
 	width: 30px;
+}
+
+#container_rodape{
+	padding: 0;
+}
+
+#rodape p {
+	margin-bottom: 0px;
 }

@@ -38,12 +38,13 @@
 
 		<div class="entry-summary">
 			<?php the_excerpt( __( 'Continue lendo <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); ?>
+			<a class="btn btn-danger" href="<?php the_permalink(); ?>">Saiba Mais »</a> <!-- chama o link do post -->
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">
-			<?php $show_sep = false; ?>
+			<?php/* $show_sep = false; ?>
 			<?php
-				/* translators: used between list items, there is a space after the comma */
+				/* translators: used between list items, there is a space after the comma *
 				$categories_list = get_the_category_list( __( ', ', 'foghorn' ) );
 				if ( $categories_list ):
 			?>

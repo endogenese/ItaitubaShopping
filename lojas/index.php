@@ -88,9 +88,11 @@
 
 			<div class="row hidden-xs">
 				<div class="col-md-12">
-					<div class="btn-group btn-group-lg btn-group-ita"><!-- btn-group-justified" -->
-						<a id="filtro_lojas" class="btn btn-default  btn-lg btn-primary btn_ativo" role="button">Listar por Lojas</a>
-						<a id="filtro_categ" class="btn btn-default  btn-lg btn-primary" role="button">Listar por categorias</a>
+					<div class="btn-group-ita">
+						<div class="btn-group btn-group-lg"><!-- btn-group-justified" -->
+							<a id="filtro_lojas" class="btn btn-default  btn-lg btn-primary btn_ativo" role="button">Listar por Lojas</a>
+							<a id="filtro_categ" class="btn btn-default  btn-lg btn-primary" role="button">Listar por categorias</a>
+						</div>
 					</div>
 
 				</div>
@@ -98,71 +100,73 @@
 
 			<div class="row" id="corpo_loja">
 				<div class="col-md-3">
+					<div  id="menu_loja">
 
-					<input type='text' id="txtBusca" class="form-control" placeholder="Buscar Loja">
-					<!-- ESSE MENU É APRESENTADO QUANDO O BOTÃO 'LISTAR POR LOJA' ESTÁ ATIVO -->
-					<div id="lista_lojas" class="ocultar">
+						<input type='text' id="txtBusca" class="form-control" placeholder="Pesquise por uma loja">
+						<!-- ESSE MENU É APRESENTADO QUANDO O BOTÃO 'LISTAR POR LOJA' ESTÁ ATIVO -->
+						<div id="lista_lojas" class="ocultar">
 
-						<ul>
-			              <li><a id="loja1-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
-			              <li><a id="loja2-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
-			              <li><a id="loja3-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
-			              <li><a id="loja4-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
-			              <li><a id="loja5-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
-			              <li><a id="loja6-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
-			              <li><a id="loja7-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
-			              <li><a id="loja8-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
-			              <li><a id="loja9-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
-			              <li><a id="loja10-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
-			            </ul>
-			        
-					</div><!-- /#lista_lojas -->
-						
-						<!-- ESSE MENU SÓ É APRESENTADO QUANDO O USUÁRIO CLICA NO BOTÃO 'LISTAR POR CATEGORIA' -->
-					 <div id="categoria_lojas">
+							<ul>
+				              <li><a id="loja1-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
+				              <li><a id="loja2-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
+				              <li><a id="loja3-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
+				              <li><a id="loja4-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
+				              <li><a id="loja5-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
+				              <li><a id="loja6-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
+				              <li><a id="loja7-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
+				              <li><a id="loja8-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
+				              <li><a id="loja9-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
+				              <li><a id="loja10-m" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
+				            </ul>
+				        
+						</div><!-- /#lista_lojas -->
+							
+							<!-- ESSE MENU SÓ É APRESENTADO QUANDO O USUÁRIO CLICA NO BOTÃO 'LISTAR POR CATEGORIA' -->
+						 <div id="categoria_lojas">
 
-								<a href="#" class="submenu">Restaurante</a>
-								<div class="tgl">
-									<ul>	
-										<li><a id="loja1-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
-				              			<li><a id="loja2-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
-									</ul>
-								</div>
-							
-								<a href="#" class="submenu">Eletrônicos</a>
-								<div class="tgl">
-									<ul>	
-				              			<li><a id="loja3-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
-				              			<li><a id="loja4-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
-				              		</ul>
-			              		</div>
-							
-								<a href="#" class="submenu">Roupas</a>
-								<div class="tgl">
-									<ul>	
-				              			<li><a id="loja5-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
-				              			<li><a id="loja6-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
-				              		</ul>
-			              		</div>
-							
-								<a href="#" class="submenu">Livraria</a>
-								<div class="tgl">
-									<ul>	
-				              			<li><a id="loja7-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
-				              			<li><a id="loja8-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
-				              		</ul>
-			              		</div>
-							
-								<a href="#" class="submenu">Livraria</a>
-								<div class="tgl">
-									<ul>	
-						              <li><a id="loja9-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
-						              <li><a id="loja10-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
-						            </ul>
-					        	</div>
-							
-			        
-					</div><!-- /#categoria_lojas -->
+									<a href="#" class="submenu">Restaurante</a>
+									<div class="tgl">
+										<ul>	
+											<li><a id="loja1-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 1</a></li>
+					              			<li><a id="loja2-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 2</a></li>
+										</ul>
+									</div>
+								
+									<a href="#" class="submenu">Eletrônicos</a>
+									<div class="tgl">
+										<ul>	
+					              			<li><a id="loja3-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 3</a></li>
+					              			<li><a id="loja4-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 4</a></li>
+					              		</ul>
+				              		</div>
+								
+									<a href="#" class="submenu">Roupas</a>
+									<div class="tgl">
+										<ul>	
+					              			<li><a id="loja5-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 5</a></li>
+					              			<li><a id="loja6-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 6</a></li>
+					              		</ul>
+				              		</div>
+								
+									<a href="#" class="submenu">Livraria</a>
+									<div class="tgl">
+										<ul>	
+					              			<li><a id="loja7-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 7</a></li>
+					              			<li><a id="loja8-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 8</a></li>
+					              		</ul>
+				              		</div>
+								
+									<a href="#" class="submenu">Livraria</a>
+									<div class="tgl">
+										<ul>	
+							              <li><a id="loja9-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 9</a></li>
+							              <li><a id="loja10-mc" href="#"> <img src="http://placehold.it/30x30"/> Loja 10</a></li>
+							            </ul>
+						        	</div>
+								
+				        
+						</div><!-- /#categoria_lojas -->
+					</div><!-- /#menu_loja-->
 				</div>
 					
 					<!-- AQUI SÃO REREPRESENTADAS TODAS AS LOJAS DO SHOPPING -->
@@ -265,7 +269,7 @@
 
 			</div><!--/#CORPO_LOJA-->
 			
-			<div class="col-md-12">
+			<div  id="container_rodape"  class="col-md-12">
 				<div class="row" id="rodape">
 
 					<p class="text-center">Siga-nos nas redes sociais</p>

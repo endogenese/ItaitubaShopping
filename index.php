@@ -104,7 +104,7 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
 						    <div class="item active">
-						      <img src="http://placehold.it/1138x300" alt="...">
+						      <img src="http://placehold.it/1170x300" alt="...">
 						      <div class="carousel-caption">
 						        <h3>Slide 1</h3>
     							<p>Descricação 1</p>
@@ -112,7 +112,7 @@
 						    </div>
 
 						    <div class="item">
-						      <img src="http://placehold.it/1138x300" alt="...">
+						      <img src="http://placehold.it/1170x300" alt="...">
 						      <div class="carousel-caption">
 						        <h3>Slide 2</h3>
     							<p>Descricação 2</p>
@@ -120,7 +120,7 @@
 						    </div>
 
 						    <div class="item">
-						      <img src="http://placehold.it/1138x300" alt="...">
+						      <img src="http://placehold.it/1170x300" alt="...">
 						      <div class="carousel-caption">
 						        <h3>Slide 2</h3>
     							<p>Descricação 2</p>
@@ -214,7 +214,7 @@
 						</ul><!-- ul media-list-->
 
 						<div id="mais_noticias" class="">
-							<a href="/blog" class="text-center" ><h3>Mais Notícias</h3></a>
+							<a href="/blog" class="text-center" ><h4>Mais Notícias</h4></a>
 						</div>
 
 					</div><!-- #NOVIDADES HOME -->
@@ -304,16 +304,18 @@
 						</div><!--/#FOTOS HOME -->
 					</div>
 
-					<div class="row" id="mapa_ita">
-						<h2>Nossa Localização</h2>
-						<iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m&amp;output=embed"></iframe><br /><small style="text-align:center;margin-left:40%"><a style="color:#000" href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m">Exibir mapa ampliado</a></small>
-					</div><!--./mapa_ita-->
+					<div class="row">
+						<div id="mapa_ita">
+							<h2>Nossa Localização</h2>
+							<iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m&amp;output=embed"></iframe><br /><small style="text-align:center;margin-left:40%"><a style="color:#000" href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=itiatuba+shopping+itaituba&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=47.242641,86.572266&amp;ie=UTF8&amp;hq=itaituba+shopping&amp;hnear=Itaituba+-+Par%C3%A1&amp;ll=-4.273316,-55.981868&amp;spn=0.013741,0.024748&amp;t=m">Exibir mapa ampliado</a></small>
+						</div><!--./mapa_ita-->
+					</div>
 
 				</div>
 
 			</div><!--/#CORPO_HOME-->
 			
-			<div class="col-md-12">
+			<div class="col-md-12" id="container_rodape">
 				<div class="row" id="rodape">
 
 					<p class="text-center">Siga-nos nas redes sociais</p>
