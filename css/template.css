@@ -50,8 +50,9 @@
     text-shadow: 0 1px 0 #000;
 }
 
-.collapse .nav > li > a{
-		text-align: center;
+/*Alinha os intens do menu ao centro*/
+.nav > li > a {
+	text-align: center;
 }
 
 /*define um fundo diferente para o item do menu selecionado*/
@@ -583,6 +584,7 @@
 #secondary > aside{
  margin-left: -4%;
  margin-right: 5%;
+ margin-top: 8px;
  background:rgba(255, 255, 255,0.9);
  border: 1px solid rgba(0, 0, 0,0.2);
 }

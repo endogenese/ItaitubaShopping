@@ -27,10 +27,11 @@
 
 				printf('<br>');
 				//echo "<div style='display:block;margin-left:auto;margin-right:auto;'>". the_post_thumbnail( 'single-post-thumbnail' )."</div>";
-				$domsxe = simplexml_load_string(get_the_post_thumbnail());
-				$thumbnailsrc = $domsxe->attributes()->src; ?>
-  				<img class="img_post_single img-rounded" src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $thumbnailsrc ?>&w=700&h=200&zc=1" />
-				<?php printf('<br>');
+				if(get_the_post_thumbnail()!=null){
+					$domsxe = simplexml_load_string(get_the_post_thumbnail());
+					$thumbnailsrc = $domsxe->attributes()->src; ?>
+	  				<img class="img_post_single img-rounded" src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $thumbnailsrc ?>&w=700&h=200&zc=1" />
+				<?php } printf('<br>');
 
 			?>
 		</div><!-- .entry-meta -->
