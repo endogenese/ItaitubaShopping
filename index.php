@@ -172,13 +172,13 @@
 						        	//<!-- chama a imagem do post -->
 						        echo "</a>";
 
-						        echo "<div class='media-body'>";
-							         echo "<h3 class='media-heading'>".the_title()."</h3>"; //<!-- chama o título do post -->
-							        echo "<span>".the_time('d/m/Y')."</span>";// <!-- chama a data do post -->
-							        echo "<p>".the_excerpt()."</p>";//<!-- chama o post -->
-							    	echo "<a class='btn btn-danger' href='.the_permalink().'>Saiba Mais »</a></div></li>";// <!-- chama o link do post -->
+						        echo "<div class='media-body'>";?>
+							         <h3 class='media-heading'><?php the_title()?></h3><!-- chama o título do post -->
+							        <?php echo "<span>".the_time('d/m/Y')."</span>";// <!-- chama a data do post -->
+							        echo "<p>".the_excerpt()."</p>";//<!-- chama o post -->?>
+							    	<a class='btn btn-danger' href='<?php the_permalink() ?>'>Saiba Mais »</a></div></li> <!-- chama o link do post -->
 						        
-						    endwhile;?>
+						    <?php endwhile;?>
 
 							<!-- <li class="media">
 						        <a class="pull-left" href="#">
